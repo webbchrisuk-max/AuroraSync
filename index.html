@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aurora Sync Test</title>
+<style>
+body{font-family:sans-serif;background:#000;color:#0ff;text-align:center;padding:40px;}
+.card{border:1px solid #0ff;padding:20px;margin:20px auto;max-width:600px;border-radius:10px;}
+</style>
+</head>
+<body>
+<h1>💎 Aurora Sync Test</h1>
+<div id="balances" class="card">Loading balances...</div>
+<div id="transactions" class="card">Loading transactions...</div>
+
+<script>
+const CORE_URL="https://raw.githubusercontent.com/webbchrisuk-max/AuroraSync/main/Monzo_Aurora.json";
+const TX_URL="https://raw.githubusercontent.com/webbchrisuk-max/AuroraSync/main/Monzo_Transactions.json";
+
+async function loadData(){
+  try{
+    const [coreRes,txRes]=await Promise.all([fetch(CORE_URL),fetch(TX_URL)]);
+    const core=await coreRes.json();
+    const tx=await txRes.json();
+    document.getElementById("balances").innerHTML=`
+      <h2>Main Balance: £${core.main_balance.toFixed(2)}</h2>
+      <p>Next Payday: ${core.next_payday}</p>`;
+    document.getElementById("transactions").innerHTML=tx.transactions.map(
+      t=>`<p>${new Date(t.date).toLocaleDateString('en-UK',{day:'2-digit',month:'short'})} – ${t.merchant} – £${t.amount.toFixed(2)}</p>`
+    ).join("");
+  }catch(e){
+    document.getElementById("balances").innerText="⚠️ Couldn't load data";
+    console.error(e);
+  }
+}
+loadData();
+</script>
+</body>
+</html>
