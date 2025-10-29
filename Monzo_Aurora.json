@@ -1,6 +1,6 @@
 {
   "account_name": "Monzo Main",
-  "main_balance": 350.15999999999997,
+  "main_balance": 347.65999999999997,
   "flex_balance": -799.87,
   "weekly_allowance": 187.5,
   "daily_allowance": 26.79,
@@ -156,5 +156,5 @@
       "target": 100
     }
   },
-  "last_sync": "2025-10-29T23:35:15.340Z"
+  "last_sync": "2025-10-29T23:49:57.415Z"
 }
