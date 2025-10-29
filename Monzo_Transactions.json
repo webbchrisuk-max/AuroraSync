@@ -1,0 +1,9 @@
+{
+  "transactions": [
+    { "date": "2025-10-28T18:03:00Z", "merchant": "400", "amount": 2.99 },
+    { "date": "2025-10-28T15:36:00Z", "merchant": "Nic Services Group", "amount": 0.70 },
+    { "date": "2025-10-27T16:03:00Z", "merchant": "400", "amount": 2.99 },
+    { "date": "2025-10-27T16:03:00Z", "merchant": "Nic Services Group", "amount": 1.10 },
+    { "date": "2025-10-25T19:12:00Z", "merchant": "Cbs Arena Kiosk 10", "amount": 8.10 }
+  ]
+}
