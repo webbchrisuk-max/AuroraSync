@@ -2,5 +2,11 @@
   "sync_source": "gmail",
   "account": "Monzo Main",
   "last_sync": "2025-10-29T12:21:51.625Z",
-  "transactions": []
+  "transactions": [
+    {
+      "date": "2025-10-29T18:19:43.000Z",
+      "merchant": "400 Work Canteen October 29,",
+      "amount": 2.5
+    }
+  ]
 }
