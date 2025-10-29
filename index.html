@@ -56,12 +56,20 @@ footer {
   font-size: 0.8rem;
   margin-top: 30px;
 }
+.status {
+  text-align: center;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
+.status.ok { color: #00ffcc; }
+.status.error { color: #ff3366; }
 </style>
 </head>
 
 <body>
   <h1>💎 Monzo Aurora v1.5 – Live Dashboard</h1>
   <p style="text-align:center; color:#aaa;">Coventry Sky Blue × Monzo Coral · Live Sync Mode</p>
+  <div id="status" class="status">🔄 Checking connection...</div>
 
   <section id="main">
     <h2>Main Account</h2>
@@ -81,43 +89,28 @@ footer {
   <footer>Coventry Sky Blue × Monzo Coral Theme · Aurora Live v1.5</footer>
 
   <script>
-  console.log("🚀 Aurora Dashboard initialising...");
+  const jsonURL = "https://webbchrisuk-max.github.io/AuroraSync/Monzo_Aurora.json";
+  const status = document.getElementById("status");
 
-  const auroraURL = "https://webbchrisuk-max.github.io/AuroraSync/Monzo_Aurora.json";
-  const transactionsURL = "https://webbchrisuk-max.github.io/AuroraSync/Monzo_Transactions.json";
+  async function loadAurora() {
+    try {
+      const res = await fetch(jsonURL + "?nocache=" + Date.now(), { cache: "no-store" });
+      if (!res.ok) throw new Error(res.status);
+      const data = await res.json();
+      console.log("✅ JSON Loaded Successfully:", data);
 
-  // === Fetch main Aurora JSON ===
-  fetch(auroraURL)
-    .then(res => {
-      if (!res.ok) throw new Error("Aurora JSON not found: " + res.status);
-      return res.json();
-    })
-    .then(data => {
-      console.log("✅ Aurora JSON loaded:", data);
+      status.textContent = "🟢 Live JSON Loaded (Balances + Pots)";
+      status.className = "status ok";
+
       renderMain(data);
       renderPots(data.pots);
-    })
-    .catch(err => {
-      console.error("⚠️ Error loading Aurora JSON:", err);
-      document.getElementById("mainContent").innerHTML = "⚠️ Unable to load live data.";
-    });
+    } catch (err) {
+      console.error("❌ Failed to load JSON:", err);
+      status.textContent = "🔴 Unable to load live data.";
+      status.className = "status error";
+    }
+  }
 
-  // === Fetch Transactions JSON ===
-  fetch(transactionsURL)
-    .then(res => {
-      if (!res.ok) throw new Error("Transactions JSON not found: " + res.status);
-      return res.json();
-    })
-    .then(data => {
-      console.log("💳 Transactions JSON loaded:", data);
-      renderTransactions(data);
-    })
-    .catch(err => {
-      console.warn("⚠️ Could not load transactions JSON:", err);
-      document.getElementById("transactionsContent").innerHTML = "No transactions found.";
-    });
-
-  // === Render Functions ===
   function renderMain(data) {
     const el = document.getElementById("mainContent");
     el.innerHTML = `
@@ -150,12 +143,7 @@ footer {
     }
   }
 
-  function renderTransactions(data) {
-    const el = document.getElementById("transactionsContent");
-    el.innerHTML = data.transactions.map(t => `
-      <div>${t.date} – ${t.merchant} <span style="float:right;">£${t.amount.toFixed(2)}</span></div>
-    `).join("");
-  }
+  loadAurora();
   </script>
 </body>
 </html>
