@@ -16,51 +16,74 @@ body {
   overflow-x: hidden;
   min-height: 100vh;
 }
+
 h1 {
   text-align: center;
   color: #4de0ff;
   text-shadow: 0 0 15px #4de0ff;
   margin-top: 25px;
 }
+
 section {
   max-width: 800px;
   margin: 20px auto;
   padding: 20px;
   border-radius: 12px;
-  background: rgba(20,20,40,0.4);
-  border: 1px solid rgba(0,255,255,0.2);
-  box-shadow: 0 0 20px rgba(0,255,255,0.2);
+  background: rgba(20, 20, 40, 0.4);
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
 }
+
 h2 {
   color: #4de0ff;
   text-shadow: 0 0 10px #4de0ff;
-  border-bottom: 1px solid rgba(0,255,255,0.3);
+  border-bottom: 1px solid rgba(0, 255, 255, 0.3);
   padding-bottom: 10px;
 }
+
 .progress {
-  height: 8px;
-  background: rgba(255,255,255,0.1);
-  border-radius: 4px;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
   overflow: hidden;
-  margin-top: 5px;
+  margin: 8px 0 14px;
+  box-shadow: 0 0 8px rgba(0, 255, 255, 0.2) inset;
+  position: relative;
 }
+
 .progress span {
   display: block;
   height: 100%;
+  width: 0%;
   background: linear-gradient(90deg, #00c6ff, #ff2e63);
-  box-shadow: 0 0 10px #00c6ff;
+  box-shadow: 0 0 15px #00c6ff, 0 0 25px #ff2e63;
+  border-radius: 6px;
+  animation: fillBar 2.2s ease-out forwards, pulseGlow 3s infinite alternate;
 }
+
+@keyframes fillBar {
+  from { width: 0%; }
+  to { width: var(--width, 100%); }
+}
+
+@keyframes pulseGlow {
+  0% { filter: brightness(1); }
+  100% { filter: brightness(1.4); }
+}
+
 footer {
   text-align: center;
   color: #4de0ff;
   font-size: 0.8rem;
   margin-top: 30px;
 }
+
 .status {
   text-align: center;
   font-size: 0.9rem;
   margin-bottom: 15px;
 }
+
 .status.ok { color: #00ffcc; }
 .status.error { color: #ff3366; }
 </style>
@@ -73,17 +96,12 @@ footer {
 
   <section id="main">
     <h2>Main Account</h2>
-    <div id="mainContent">⚠️ Unable to load live data.</div>
+    <div id="mainContent">⚠️ Awaiting live data...</div>
   </section>
 
   <section id="pots">
     <h2>Pots Overview</h2>
     <div id="potsContent">Loading pots...</div>
-  </section>
-
-  <section id="transactions">
-    <h2>Recent Transactions</h2>
-    <div id="transactionsContent">Loading transactions...</div>
   </section>
 
   <footer>Coventry Sky Blue × Monzo Coral Theme · Aurora Live v1.5</footer>
@@ -115,30 +133,38 @@ footer {
     const el = document.getElementById("mainContent");
     el.innerHTML = `
       <h3 style="font-size:2em;color:#fff;">£${data.main_balance.toFixed(2)}</h3>
-      <p>Flex Balance: £${data.flex_balance.toFixed(2)}<br>
-      Weekly Allowance: £${data.weekly_allowance.toFixed(2)}<br>
-      Daily Allowance: £${data.daily_allowance.toFixed(2)}<br>
-      Next Payday: ${data.next_payday}</p>
+      <p>
+        Flex Balance: £${data.flex_balance.toFixed(2)}<br>
+        Weekly Allowance: £${data.weekly_allowance.toFixed(2)}<br>
+        Daily Allowance: £${data.daily_allowance.toFixed(2)}<br>
+        Next Payday: ${data.next_payday}
+      </p>
     `;
   }
 
   function renderPots(pots) {
     const el = document.getElementById("potsContent");
     el.innerHTML = "";
+
     for (const [name, pot] of Object.entries(pots)) {
       if (name === "Direct Debits" && pot.items) {
         let list = pot.items.map(i => `
           <li>${i.name} – £${i.amount.toFixed(2)} (${i.status})</li>
         `).join("");
-        el.innerHTML += `<div><strong>${name}</strong><ul>${list}</ul></div>`;
+        el.innerHTML += `
+          <div class="pot">
+            <strong>${name}</strong>
+            <ul>${list}</ul>
+          </div>`;
       } else {
         const progress = pot.target > 0 ? (pot.current / pot.target) * 100 : 0;
         el.innerHTML += `
-          <div>
+          <div class="pot">
             <strong>${name}</strong> £${pot.current.toFixed(2)} / £${pot.target.toFixed(2)}
-            <div class="progress"><span style="width:${progress}%;"></span></div>
-          </div>
-        `;
+            <div class="progress" style="--width:${progress}%;">
+              <span></span>
+            </div>
+          </div>`;
       }
     }
   }
