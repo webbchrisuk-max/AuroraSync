@@ -1,40 +1,257 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aurora Sync Test</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>💎 Monzo Aurora v1.5 – Live Dashboard</title>
 <style>
-body{font-family:sans-serif;background:#000;color:#0ff;text-align:center;padding:40px;}
-.card{border:1px solid #0ff;padding:20px;margin:20px auto;max-width:600px;border-radius:10px;}
+/* === AURORA SKYLINE THEME === */
+:root {
+  --sky: #00bfff;
+  --coral: #ff4b4b;
+  --bg-dark: #000814;
+}
+* {box-sizing:border-box;margin:0;padding:0;}
+body {
+  font-family:'Orbitron',sans-serif;
+  background:radial-gradient(circle at top right,#00142a 0%,#000 90%);
+  color:#e8f9ff;
+  min-height:100vh;
+  overflow-x:hidden;
+  animation:pulseBG 18s ease-in-out infinite alternate;
+}
+@keyframes pulseBG {
+  0% {background:radial-gradient(circle at top right,#00142a 0%,#000 90%);}
+  100% {background:radial-gradient(circle at bottom left,#00284f 0%,#000 95%);}
+}
+header {
+  text-align:center;
+  padding:25px 10px 15px;
+  border-bottom:1px solid rgba(0,191,255,0.25);
+  background:rgba(0,15,35,0.45);
+  box-shadow:0 0 30px rgba(0,191,255,0.2);
+  position:sticky;top:0;z-index:100;
+}
+header h1 {
+  color:var(--sky);
+  text-shadow:0 0 12px var(--sky),0 0 25px var(--sky);
+  font-size:1.6em;
+}
+header p {
+  color:#9fdfff;
+  font-size:0.9em;
+  margin-top:6px;
+}
+main {
+  max-width:900px;
+  margin:25px auto 50px;
+  padding:0 10px;
+  display:flex;
+  flex-direction:column;
+  gap:25px;
+}
+.section {
+  background:rgba(10,20,35,0.6);
+  border:1px solid rgba(0,191,255,0.25);
+  border-radius:12px;
+  padding:20px;
+  box-shadow:0 0 30px rgba(0,191,255,0.15);
+}
+.section h2 {
+  color:var(--sky);
+  font-size:1.2em;
+  text-shadow:0 0 8px var(--sky);
+  border-bottom:1px solid rgba(0,191,255,0.3);
+  padding-bottom:6px;
+  margin-bottom:10px;
+}
+.balance-block {
+  text-align:center;
+  margin:15px 0;
+}
+.balance-amount {
+  font-size:2.4em;
+  font-weight:700;
+  color:var(--sky);
+  text-shadow:0 0 12px var(--sky),0 0 22px var(--sky),0 0 40px var(--coral);
+}
+.balance-info {
+  margin-top:8px;
+  color:#b6eeff;
+  line-height:1.7em;
+}
+.balance-info .flex {color:var(--coral);}
+.balance-info .daily {color:var(--coral);font-weight:600;}
+.grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(170px,1fr));
+  gap:16px;
+  margin-top:10px;
+}
+.card {
+  background:rgba(15,25,45,0.6);
+  border:1px solid rgba(0,191,255,0.25);
+  border-radius:10px;
+  padding:10px;
+  text-align:center;
+  box-shadow:0 0 12px rgba(0,191,255,0.1);
+}
+.card strong {
+  display:block;
+  color:var(--sky);
+  font-weight:600;
+  margin-bottom:3px;
+}
+.progress {
+  background:#0b1a26;
+  border-radius:8px;
+  overflow:hidden;
+  height:10px;
+  box-shadow:0 0 8px rgba(0,191,255,0.25);
+  margin-top:6px;
+}
+.progress span {
+  display:block;
+  height:100%;
+  background:linear-gradient(90deg,var(--coral),var(--sky),var(--coral));
+  background-size:200% 200%;
+  animation:auroraFlow 5s linear infinite,pulseFill 3s ease-in-out infinite;
+  border-radius:8px;
+  width:0%;
+  transition:width 1s ease;
+}
+@keyframes auroraFlow {0%{background-position:0% 50%;}100%{background-position:200% 50%;}}
+@keyframes pulseFill {0%,100%{filter:brightness(100%);}50%{filter:brightness(140%);}}
+.txRow {
+  display:flex;
+  justify-content:space-between;
+  padding:6px 0;
+  border-bottom:1px dashed rgba(255,255,255,0.1);
+}
+.txRow:last-child{border-bottom:none;}
+.txRow .amount {color:var(--coral);}
+footer {
+  text-align:center;
+  color:#8ecfff;
+  font-size:0.75em;
+  padding:20px 0;
+  border-top:1px solid rgba(0,191,255,0.2);
+  background:rgba(0,15,35,0.4);
+}
 </style>
 </head>
 <body>
-<h1>💎 Aurora Sync Test</h1>
-<div id="balances" class="card">Loading balances...</div>
-<div id="transactions" class="card">Loading transactions...</div>
+<header>
+  <h1>💎 Monzo Aurora v1.5 – Live Dashboard</h1>
+  <p>Coventry Sky Blue × Monzo Coral · Live Sync Mode</p>
+</header>
+
+<main>
+  <section class="section" id="mainAccount">
+    <h2>Main Account</h2>
+    <div id="mainData" class="balance-block">
+      <div class="balance-amount">Loading...</div>
+      <div class="balance-info">Fetching Monzo data...</div>
+    </div>
+  </section>
+
+  <section class="section" id="potsSection">
+    <h2>Pots Overview</h2>
+    <div id="potsData">Loading pots...</div>
+  </section>
+
+  <section class="section" id="txSection">
+    <h2>Recent Transactions</h2>
+    <div id="txData">Loading transactions...</div>
+  </section>
+</main>
+
+<footer>
+  Coventry Sky Blue × Monzo Coral Theme · Aurora Live v1.5
+</footer>
 
 <script>
-const CORE_URL="https://raw.githubusercontent.com/webbchrisuk-max/AuroraSync/main/Monzo_Aurora.json";
-const TX_URL="https://raw.githubusercontent.com/webbchrisuk-max/AuroraSync/main/Monzo_Transactions.json";
+// === CONFIG ===
+const CORE_URL = "https://raw.githubusercontent.com/webbchrisuk-max/AuroraSync/main/Monzo_Aurora.json";
+const TX_URL = "https://raw.githubusercontent.com/webbchrisuk-max/AuroraSync/main/Monzo_Transactions.json";
 
-async function loadData(){
-  try{
-    const [coreRes,txRes]=await Promise.all([fetch(CORE_URL),fetch(TX_URL)]);
-    const core=await coreRes.json();
-    const tx=await txRes.json();
-    document.getElementById("balances").innerHTML=`
-      <h2>Main Balance: £${core.main_balance.toFixed(2)}</h2>
-      <p>Next Payday: ${core.next_payday}</p>`;
-    document.getElementById("transactions").innerHTML=tx.transactions.map(
-      t=>`<p>${new Date(t.date).toLocaleDateString('en-UK',{day:'2-digit',month:'short'})} – ${t.merchant} – £${t.amount.toFixed(2)}</p>`
-    ).join("");
-  }catch(e){
-    document.getElementById("balances").innerText="⚠️ Couldn't load data";
-    console.error(e);
+// === LOAD ===
+async function loadAurora(){
+  try {
+    const [coreRes, txRes] = await Promise.all([
+      fetch(CORE_URL, { cache: "no-store" }),
+      fetch(TX_URL, { cache: "no-store" })
+    ]);
+    const core = await coreRes.json();
+    const tx = await txRes.json();
+    updateMain(core);
+    updatePots(core.pots);
+    updateTx(tx.transactions);
+  } catch(e){
+    document.getElementById("mainData").innerHTML = "<div class='balance-info'>⚠️ Unable to load live data.</div>";
+    console.error("Aurora Load Error:", e);
   }
 }
-loadData();
+
+// === UPDATE MAIN ===
+function updateMain(data){
+  const main = document.getElementById("mainData");
+  const daily = (data.weekly_allowance / 7).toFixed(2);
+  main.innerHTML = `
+    <div class="balance-amount">£${data.main_balance.toFixed(2)}</div>
+    <div class="balance-info">
+      <span class="flex">Flex Balance:</span> £${data.flex_balance.toFixed(2)}<br>
+      Weekly Allowance: £${data.weekly_allowance.toFixed(2)}<br>
+      <span class="daily">Daily Allowance: £${daily}</span><br>
+      ${daysUntil(data.next_payday)} days until payday
+    </div>
+  `;
+}
+
+// === UPDATE POTS ===
+function updatePots(pots){
+  const potsDiv = document.getElementById("potsData");
+  const out = [];
+  for (const [name, val] of Object.entries(pots)) {
+    const current = val.current ?? val;
+    const target = val.target ?? 0;
+    const percent = target ? Math.min((current / target) * 100, 100).toFixed(1) : 0;
+    out.push(`
+      <div class="card">
+        <strong>${name}</strong>
+        £${current.toFixed(2)} / £${target.toFixed(2)}
+        <div class="progress"><span style="width:${percent}%;"></span></div>
+      </div>
+    `);
+  }
+  potsDiv.innerHTML = '<div class="grid">'+out.join("")+'</div>';
+}
+
+// === UPDATE TRANSACTIONS ===
+function updateTx(list){
+  const txDiv = document.getElementById("txData");
+  if(!list || !list.length){
+    txDiv.innerHTML = "<p>No recent transactions</p>";
+    return;
+  }
+  const out = list.slice(-6).reverse().map(t=>`
+    <div class="txRow">
+      <span>${new Date(t.date).toLocaleDateString('en-UK',{day:'2-digit',month:'short'})}</span>
+      <span>${t.merchant}</span>
+      <span class="amount">£${t.amount.toFixed(2)}</span>
+    </div>
+  `);
+  txDiv.innerHTML = out.join("");
+}
+
+// === HELPERS ===
+function daysUntil(date){
+  const now = new Date(), payday = new Date(date);
+  return Math.ceil((payday - now)/(1000*60*60*24));
+}
+
+// === INIT ===
+loadAurora();
 </script>
 </body>
 </html>
