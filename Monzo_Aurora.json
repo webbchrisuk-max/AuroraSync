@@ -1,20 +1,50 @@
 {
-  "main_balance": 358.64,
+  "main_balance": 357.64,
   "flex_balance": -799.87,
-  "weekly_allowance": 187.50,
+  "weekly_allowance": 187.5,
   "daily_allowance": 26.79,
   "next_payday": "2025-11-07",
   "cycle_length": 28,
   "pots": {
-    "Flex Repayment": { "current": 419.00, "target": 419.00 },
-    "Direct Debits": { "current": 416.35, "target": 416.35 },
-    "Holiday Pot": { "current": 74.45, "target": 297.79 },
-    "Coventry City FC": { "current": 71.43, "target": 500.00 },
-    "IG Trading": { "current": 115.05, "target": 150.00 },
-    "Car Maintenance": { "current": 201.49, "target": 500.00 },
-    "Work Buffer": { "current": 55.83, "target": 150.00 },
-    "Holding Pot": { "current": 203.93, "target": 300.00 },
-    "Savings": { "current": 500.00, "target": 1000.00 },
-    "Investments": { "current": 0.04, "target": 100.00 }
+    "Flex Repayment": {
+      "current": 419,
+      "target": 419
+    },
+    "Direct Debits": {
+      "current": 416.35,
+      "target": 416.35
+    },
+    "Holiday Pot": {
+      "current": 74.45,
+      "target": 297.79
+    },
+    "Coventry City FC": {
+      "current": 71.43,
+      "target": 500
+    },
+    "IG Trading": {
+      "current": 115.05,
+      "target": 150
+    },
+    "Car Maintenance": {
+      "current": 201.49,
+      "target": 500
+    },
+    "Work Buffer": {
+      "current": 55.83,
+      "target": 150
+    },
+    "Holding Pot": {
+      "current": 203.93,
+      "target": 300
+    },
+    "Savings": {
+      "current": 500,
+      "target": 1000
+    },
+    "Investments": {
+      "current": 0.04,
+      "target": 100
+    }
   }
 }
