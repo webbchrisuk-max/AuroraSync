@@ -1,84 +1,129 @@
-{
-  "account_name": "Monzo Main",
-  "main_balance": 352.94,
-  "flex_balance": -799.87,
-  "weekly_allowance": 187.50,
-  "daily_allowance": 26.79,
-  "next_payday": "2025-11-07",
-  "cycle_length": 28,
-
-  "weekly_spending": {
-    "week_label": "Week 3 (24–30 Oct 2025)",
-    "week_start": "2025-10-24",
-    "week_end": "2025-10-30",
-    "transactions": [
-      {
-        "date": "2025-10-24",
-        "description": "Home Bargains",
-        "amount": 23.77,
-        "category": "Shopping"
-      },
-      {
-        "date": "2025-10-25",
-        "description": "CBS Arena Mobile Bars",
-        "amount": 7.20,
-        "category": "Entertainment"
-      },
-      {
-        "date": "2025-10-25",
-        "description": "CBS Arena Kiosk 10",
-        "amount": 8.10,
-        "category": "Food & Drink"
-      },
-      {
-        "date": "2025-10-30",
-        "description": "One Stop",
-        "amount": 3.60,
-        "category": "Groceries"
-      }
-    ],
-    "total_spent": 42.67,
-    "allowance_remaining": 144.83
-  },
-
-  "pots": {
-    "Flex Repayment (Current)": {
-      "current": 419,
-      "target": 419
+"Direct Debits": {
+  "description": "All active direct debits linked to Monzo account, including those paid from main balance and direct debit pot.",
+  "current_total": 408.62,
+  "target": 557.86,
+  "remaining_to_target": 149.24,
+  "next_due_date": "2025-11-01",
+  "total_items": 17,
+  "items": [
+    {
+      "name": "Driver & Vehicle Licensing Agency",
+      "amount": 23.18,
+      "status": "pending",
+      "date": "2025-11-01",
+      "source": "Direct Debits Pot"
     },
-    "Flex Repayment (Remaining)": {
-      "current": 0,
-      "target": 380.87
+    {
+      "name": "Vodafone",
+      "amount": 23.28,
+      "status": "pending",
+      "date": "2025-11-01",
+      "source": "Direct Debits Pot"
     },
-    "Direct Debits": {
-      "current_total": 539.21,
-      "target": 539.21,
-      "items": [
-        {
-          "name": "Driver & Vehicle Licensing Agency",
-          "amount": 23.18,
-          "status": "pending",
-          "date": "2025-11-01"
-        },
-        {
-          "name": "Vodafone",
-          "amount": 28.54,
-          "status": "pending",
-          "date": "2025-11-03"
-        }
-      ]
+    {
+      "name": "Octopus Energy",
+      "amount": 94.90,
+      "status": "pending",
+      "date": "2025-11-01",
+      "source": "Direct Debits Pot"
     },
-    "Holiday Pot": {
-      "current": 214.45,
-      "target": 297.79
+    {
+      "name": "Rugby Borough Council",
+      "amount": 139.00,
+      "status": "pending",
+      "date": "2025-11-01",
+      "source": "Direct Debits Pot"
     },
-    "Car Maintenance": {
-      "current": 194.33,
-      "target": 300
+    {
+      "name": "Legal & General",
+      "amount": 17.92,
+      "status": "pending",
+      "date": "2025-11-01",
+      "source": "Direct Debits Pot"
     },
-    "Work Buffer": {
-      "current": 120.00,
-      "target": 120.00
+    {
+      "name": "Severn Trent Water",
+      "amount": 43.86,
+      "status": "pending",
+      "date": "2025-11-01",
+      "source": "Direct Debits Pot"
+    },
+    {
+      "name": "Sports Direct",
+      "amount": 20.00,
+      "status": "pending",
+      "date": "2025-11-02",
+      "source": "Direct Debits Pot"
+    },
+    {
+      "name": "Monzo Plus",
+      "amount": 5.00,
+      "status": "pending",
+      "date": "2025-11-08",
+      "source": "Direct Debits Pot"
+    },
+    {
+      "name": "ID Mobile",
+      "amount": 10.00,
+      "status": "pending",
+      "date": "2025-11-08",
+      "source": "Direct Debits Pot"
+    },
+    {
+      "name": "Postcode Lottery #1",
+      "amount": 12.25,
+      "status": "pending",
+      "date": "2025-11-10",
+      "source": "Direct Debits Pot"
+    },
+    {
+      "name": "Postcode Lottery #2",
+      "amount": 12.25,
+      "status": "pending",
+      "date": "2025-11-10",
+      "source": "Direct Debits Pot"
+    },
+    {
+      "name": "Postcode Lottery #3",
+      "amount": 12.25,
+      "status": "pending",
+      "date": "2025-11-10",
+      "source": "Direct Debits Pot"
+    },
+    {
+      "name": "Virgin Media",
+      "amount": 46.39,
+      "status": "pending",
+      "date": "2025-11-14",
+      "source": "Direct Debits Pot"
+    },
+    {
+      "name": "Apple One",
+      "amount": 18.95,
+      "status": "pending",
+      "date": "2025-11-13",
+      "source": "Main Account"
+    },
+    {
+      "name": "Barclays Partner Finance",
+      "amount": 50.92,
+      "status": "pending",
+      "date": "2025-11-17",
+      "source": "Direct Debits Pot"
+    },
+    {
+      "name": "ChatGPT Plus",
+      "amount": 19.99,
+      "status": "pending",
+      "date": "2025-11-23",
+      "source": "Main Account"
+    },
+    {
+      "name": "Contents Insurance",
+      "amount": 7.73,
+      "status": "paid",
+      "date": "2025-10-30",
+      "source": "Main Account"
     }
-  }
+  ]
 }
