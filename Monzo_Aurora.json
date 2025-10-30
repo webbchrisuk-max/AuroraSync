@@ -9,28 +9,38 @@
   "weekly_spending": {
   "week_start": "2025-10-27",
   "week_end": "2025-11-02",
+  "weekly_spending": {
+  "week_label": "Week 4 (31 Oct – 6 Nov 2025)",
+  "week_start": "2025-10-24",
+  "week_end": "2025-10-30",
   "transactions": [
     {
-      "date": "2025-10-28",
-      "description": "Tesco Groceries",
-      "amount": 34.12,
+      "date": "2025-10-31",
+      "description": "Home Bargains",
+      "amount": 23.77,
+      "category": "Shopping"
+    },
+    {
+      "date": "2025-11-01",
+      "description": "CBS Arena Mobile Bars",
+      "amount": 7.20,
+      "category": "Entertainment"
+    },
+    {
+      "date": "2025-11-01",
+      "description": "CBS Arena Kiosk 10",
+      "amount": 8.10,
+      "category": "Food & Drink"
+    },
+    {
+      "date": "2025-11-03",
+      "description": "One Stop",
+      "amount": 3.60,
       "category": "Groceries"
-    },
-    {
-      "date": "2025-10-29",
-      "description": "Shell Petrol",
-      "amount": 47.80,
-      "category": "Transport"
-    },
-    {
-      "date": "2025-10-29",
-      "description": "Costa Coffee",
-      "amount": 5.90,
-      "category": "Eating Out"
     }
   ],
-  "total_spent": 87.82,
-  "allowance_remaining": 99.68
+  "total_spent": 42.67,
+  "allowance_remaining": 144.83
 },
   "pots": {
     "Flex Repayment (Current)": {
