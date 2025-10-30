@@ -1,22 +1,22 @@
 {
   "account_name": "Monzo Main",
-  "main_balance": 352.94,
+  "main_balance": 343.42,
   "flex_balance": -799.87,
-  "weekly_allowance": 187.5,
+  "weekly_allowance": 187.50,
   "daily_allowance": 26.79,
   "next_payday": "2025-11-07",
   "cycle_length": 28,
   "pots": {
     "Flex Repayment (Current)": {
-      "current": 419,
-      "target": 419
+      "current": 419.00,
+      "target": 419.00
     },
     "Flex Repayment (Remaining)": {
-      "current": 0,
+      "current": 0.00,
       "target": 380.87
     },
     "Direct Debits": {
-      "current_total": 539.21,
+      "current_total": 408.62,
       "target": 539.21,
       "items": [
         {
@@ -33,25 +33,25 @@
         },
         {
           "name": "Octopus Energy",
-          "amount": 94.9,
+          "amount": 94.90,
           "status": "pending",
           "date": "2025-11-01"
         },
         {
           "name": "Sports Direct",
-          "amount": 20,
+          "amount": 20.00,
           "status": "pending",
           "date": "2025-11-02"
         },
         {
           "name": "Monzo Plus",
-          "amount": 5,
+          "amount": 5.00,
           "status": "pending",
           "date": "2025-11-08"
         },
         {
           "name": "ID Mobile",
-          "amount": 10,
+          "amount": 10.00,
           "status": "pending",
           "date": "2025-11-08"
         },
@@ -87,7 +87,7 @@
         },
         {
           "name": "Rugby B.C.",
-          "amount": 139,
+          "amount": 139.00,
           "status": "pending",
           "date": "2025-11-01"
         },
@@ -129,32 +129,32 @@
     },
     "Coventry City F.C": {
       "current": 71.43,
-      "target": 500
+      "target": 500.00
     },
     "IG Trading": {
-      "current": 115.1,
-      "target": 150
+      "current": 122.00,
+      "target": 150.00
     },
     "Car Maintenance": {
       "current": 201.49,
-      "target": 500
+      "target": 500.00
     },
     "Work Buffer": {
       "current": 55.83,
-      "target": 150
+      "target": 150.00
     },
     "Holding Pot": {
       "current": 203.93,
-      "target": 300
+      "target": 300.00
     },
     "Savings": {
-      "current": 500,
-      "target": 1000
+      "current": 500.00,
+      "target": 1000.00
     },
     "Investments": {
       "current": 0.04,
-      "target": 100
+      "target": 100.00
     }
   },
-  "last_sync": "2025-10-29T23:49:57.415Z"
+  "last_sync": "2025-10-30T18:37:00.000Z"
 }
