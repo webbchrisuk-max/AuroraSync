@@ -6,6 +6,32 @@
   "daily_allowance": 26.79,
   "next_payday": "2025-11-07",
   "cycle_length": 28,
+  ""weekly_spending": {
+  "week_start": "2025-10-27",
+  "week_end": "2025-11-02",
+  "transactions": [
+    {
+      "date": "2025-10-28",
+      "description": "Tesco Groceries",
+      "amount": 34.12,
+      "category": "Groceries"
+    },
+    {
+      "date": "2025-10-29",
+      "description": "Shell Petrol",
+      "amount": 47.80,
+      "category": "Transport"
+    },
+    {
+      "date": "2025-10-29",
+      "description": "Costa Coffee",
+      "amount": 5.90,
+      "category": "Eating Out"
+    }
+  ],
+  "total_spent": 87.82,
+  "allowance_remaining": 99.68
+},
   "pots": {
     "Flex Repayment (Current)": {
       "current": 419.00,
