@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Aurora Nexus Command Center</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+
+<style>
+body {
+  background: radial-gradient(circle at top right, #060016 0%, #0a001f 80%);
+  font-family: "Orbitron", sans-serif;
+  color: #fff;
+  text-align: center;
+  padding: 60px 20px;
+  overflow-x: hidden;
+}
+h1 {
+  color: #00ffe5;
+  text-shadow: 0 0 15px #00fff2, 0 0 40px #0088ff;
+  margin-bottom: 45px;
+  letter-spacing: 1.5px;
+}
+.button {
+  display: block;
+  width: 260px;
+  margin: 25px auto;
+  padding: 18px;
+  border: 1px solid #0ff;
+  border-radius: 12px;
+  background: rgba(0, 255, 255, 0.08);
+  color: #fff;
+  font-size: 20px;
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.15);
+}
+.button:hover {
+  background: rgba(0, 255, 255, 0.25);
+  transform: scale(1.05);
+  box-shadow: 0 0 35px #00fff2;
+}
+footer {
+  margin-top: 55px;
+  font-size: 13px;
+  opacity: 0.85;
+}
+
+/* === Sync Glow Indicator === */
+#auroraSyncContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+#auroraSyncDot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #666;
+  box-shadow: 0 0 10px #333;
+  animation: pulse 2.5s infinite;
+}
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 0.9; }
+  50% { transform: scale(1.3); opacity: 1; }
+}
+</style>
+</head>
+
+<body>
+<h1>⚡ Aurora Nexus Command Center ⚡</h1>
+
+<a class="button" href="monzo/monzo.html">💰 Monzo Aurora</a>
+<a class="button" href="isa_hub/isa.html">📈 ISA Hub</a>
+<a class="button" href="dividends/planner.html">💸 Dividend Planner</a>
+
+<footer>
+  <div id="auroraSyncContainer">
+    <div id="auroraSyncDot"></div>
+    <div id="auroraSyncStatus">⏳ Checking sync...</div>
+  </div>
+</footer>
+
+<script>
+async function validateAuroraSync() {
+  const STATUS = document.getElementById("auroraSyncStatus");
+  const DOT = document.getElementById("auroraSyncDot");
+  const expectedChecksum = "f08c2e2d7b9b4a6f94d1dce7caa1a1fdbb1e62a3cfb77534ae001ae989b4ed4f"; // from AuroraSync.json
+
+  try {
+    const response = await fetch("AuroraSync.json?nocache=" + Date.now());
+    const data = await response.json();
+
+    if (!data.integrity || !data.integrity.checksum) {
+      STATUS.innerHTML = "⚠️ No integrity block found";
+      DOT.style.background = "#ff4444";
+      DOT.style.boxShadow = "0 0 20px #ff4444";
+      return;
+    }
+
+    if (data.integrity.checksum === expectedChecksum && data.integrity.is_valid === true) {
+      STATUS.innerHTML = "✅ Synced (" + data.integrity.last_validated + ")";
+      DOT.style.background = "#00ffcc";
+      DOT.style.boxShadow = "0 0 20px #00ffcc";
+    } else {
+      STATUS.innerHTML = "⚠️ Out of Date – Refresh Needed";
+      DOT.style.background = "#ffcc00";
+      DOT.style.boxShadow = "0 0 20px #ffcc00";
+    }
+  } catch (err) {
+    STATUS.innerHTML = "❌ Sync Error";
+    DOT.style.background = "#ff4444";
+    DOT.style.boxShadow = "0 0 20px #ff4444";
+  }
+}
+document.addEventListener("DOMContentLoaded", validateAuroraSync);
+</script>
+
+</body>
+</html>
