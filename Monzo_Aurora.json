@@ -1,36 +1,8 @@
-{
+"monzo": {
   "account_name": "Monzo Main",
   "main_balance": 343.42,
   "flex_balance": -799.87,
   "weekly_allowance": 187.50,
-  "weekly_rollover": {
-  "enabled": true,
-  "day": "Friday",
-  "time": "00:00",
-  "actions": [
-    "reset_weekly_spending",
-    "recalculate_allowance",
-    "archive_previous_week"
-  ],
-  "last_rollover": "2025-10-25T00:00:00Z",
-  "next_rollover": "2025-11-01T00:00:"weekly_rollover",
-  "enabled": true,
-  "day": "Friday",
-  "time": "00:00",
-  "actions": [
-    "reset_weekly_spending",
-    "recalculate_allowance",
-    "archive_previous_week",
-    "move_underspend_to_holding"
-  ],
-  "last_rollover": "2025-10-25T00:00:00Z",
-  "next_rollover": "2025-11-01T00:00:00Z",
-  "rules": {
-    "move_underspend_to_holding": true,
-    "target_pot": "Holding Pot"
-  }
-}
-}
   "daily_allowance": 26.79,
   "next_payday": "2025-11-07",
   "cycle_length": 28,
@@ -38,7 +10,6 @@
   "pots": {
     "Flex Repayment (Current)": { "current": 419.00, "target": 419.00 },
     "Flex Repayment (Remaining)": { "current": 0.00, "target": 380.87 },
-
     "Direct Debits": {
       "description": "True direct debits funded by the Direct Debits pot",
       "current_total": 408.62,
@@ -63,7 +34,6 @@
         { "name": "Barclays Partner Finance", "amount": 50.92, "status": "pending", "date": "2025-11-17" }
       ]
     },
-
     "Holiday Pot": { "current": 74.45, "target": 297.79 },
     "Coventry City F.C": { "current": 71.43, "target": 500.00 },
     "IG Trading": { "current": 122.00, "target": 150.00 },
@@ -124,6 +94,33 @@
       }
     ],
     "total_monthly_subscriptions": 61.61
+  },
+
+  "weekly_spending": {
+    "week_start": "2025-10-31",
+    "week_end": "2025-11-06",
+    "spent": 5.12,
+    "weekly_allowance": 187.50,
+    "remaining": 182.38,
+    "cycle_reference": "Week 4 of current pay period"
+  },
+
+  "weekly_rollover": {
+    "enabled": true,
+    "day": "Friday",
+    "time": "00:00",
+    "actions": [
+      "reset_weekly_spending",
+      "recalculate_allowance",
+      "archive_previous_week",
+      "move_underspend_to_holding"
+    ],
+    "last_rollover": "2025-10-25T00:00:00Z",
+    "next_rollover": "2025-11-01T00:00:00Z",
+    "rules": {
+      "move_underspend_to_holding": true,
+      "target_pot": "Holding Pot"
+    }
   },
 
   "last_sync": "2025-10-30T19:10:00.000Z"
