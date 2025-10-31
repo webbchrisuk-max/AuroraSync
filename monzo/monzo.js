@@ -1,18 +1,19 @@
-// === Monzo Aurora Dashboard – Live JSON Data Loader === //
+// === Monzo Aurora Dashboard – Live JSON Data Loader (Stable Build) === //
 
 async function loadMonzoData() {
   try {
-    const response = await fetch("/AuroraSync.json?nocache=" + Date.now());
+    // ✅ Load JSON from the repo root
+    const response = await fetch("/AuroraSync/AuroraSync.json?nocache=" + Date.now());
+    if (!response.ok) throw new Error("Network response was not ok");
+
     const data = await response.json();
 
-    // confirm data loaded
-    console.log("✅ Monzo data loaded:", data);
+    // ✅ Extract Monzo data block
+    const monzo = data.account_name === "Monzo Main" ? data : data.monzo || data;
 
-    // ===============================
-    //  MONZO ACCOUNT SUMMARY
-    // ===============================
-    const monzo = data.monzo || data; // adjust if nested later
+    console.log("✅ Monzo data loaded:", monzo);
 
+    // === BALANCES ===
     document.getElementById("main-balance").textContent =
       "£" + monzo.main_balance.toFixed(2);
 
@@ -25,42 +26,48 @@ async function loadMonzoData() {
     document.getElementById("daily-allowance").textContent =
       "£" + monzo.daily_allowance.toFixed(2);
 
-    document.getElementById("next-payday").textContent =
-      monzo.next_payday;
+    document.getElementById("next-payday").textContent = monzo.next_payday;
 
-    // ===============================
-    //  POTS OVERVIEW
-    // ===============================
-    const potsList = document.getElementById("pots-list");
-    potsList.innerHTML = ""; // clear placeholder items
+    // === POTS SECTION ===
+    const potsContainer = document.getElementById("pots-list");
+    potsContainer.innerHTML = "";
 
-    for (const [potName, pot] of Object.entries(monzo.pots)) {
-      const li = document.createElement("li");
+    if (monzo.pots && Object.keys(monzo.pots).length > 0) {
+      for (const [potName, pot] of Object.entries(monzo.pots)) {
+        const li = document.createElement("li");
+        const current = pot.current ?? pot.current_total ?? 0;
+        const target = pot.target ?? 0;
 
-      // show current vs target (rounded to 2dp)
-      li.innerHTML = `
-        <strong>${potName}</strong><br>
-        £${pot.current.toFixed(2)} / £${pot.target.toFixed(2)}
-      `;
+        li.innerHTML = `
+          <strong>${potName}</strong><br>
+          £${current.toFixed(2)} / £${target.toFixed(2)}
+        `;
 
-      potsList.appendChild(li);
+        potsContainer.appendChild(li);
+      }
+    } else {
+      potsContainer.innerHTML = "<li>No pots found in JSON</li>";
     }
 
-    // ===============================
-    //  LAST SYNC
-    // ===============================
-    if (document.getElementById("last-sync")) {
-      document.getElementById("last-sync").textContent = monzo.last_sync;
+    // === LAST SYNC ===
+    const lastSyncElement = document.getElementById("last-sync");
+    if (monzo.last_sync) {
+      lastSyncElement.textContent = new Date(monzo.last_sync).toLocaleString();
+    } else if (data.last_sync) {
+      lastSyncElement.textContent = new Date(data.last_sync).toLocaleString();
+    } else {
+      lastSyncElement.textContent = "N/A";
     }
 
   } catch (err) {
     console.error("⚠️ Failed to load Monzo data:", err);
-    const error = document.createElement("p");
-    error.style.color = "#ff8080";
-    error.textContent = "Error loading data. Please refresh.";
-    document.body.appendChild(error);
+
+    const errorNotice = document.createElement("p");
+    errorNotice.style.color = "#ff5f5f";
+    errorNotice.textContent = "Error loading data. Please refresh.";
+    document.body.appendChild(errorNotice);
   }
 }
 
-// run when page finishes loading
+// Run once page is ready
 document.addEventListener("DOMContentLoaded", loadMonzoData);
