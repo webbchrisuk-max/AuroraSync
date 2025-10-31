@@ -1,14 +1,14 @@
 {
   "meta": {
-    "aurora_version": "2.1.0",
+    "aurora_version": "2.1.2",
     "system_status": "stable",
-    "last_full_sync": "2025-11-02T00:00:00Z",
+    "last_full_sync": "2025-11-03T00:00:00Z",
     "description": "Unified AuroraSync core linking Monzo, ISA, Trade212, Tesco, Watchlist and Dividend Planner."
   },
 
   "monzo": {
     "account_name": "Monzo Main",
-    "main_balance": 343.42,
+    "main_balance": 198.59,
     "flex_balance": -799.87,
     "weekly_allowance": 187.50,
     "daily_allowance": 26.79,
@@ -19,7 +19,7 @@
       "year": 2025,
       "weeks_in_cycle": 4,
       "current_week": 4,
-      "days_remaining": 5
+      "days_remaining": 4
     },
     "pots": {
       "Flex Repayment (Current)": { "current": 419.00, "target": 419.00 },
@@ -33,7 +33,7 @@
       "Holding Pot": {
         "current": 348.76,
         "target": 300.00,
-        "notes": "Includes £144.83 underspend from Week 3 rollover."
+        "notes": "Adjusted on 2025-11-03. Current balance confirmed."
       },
       "Savings": { "current": 500.00, "target": 1000.00 },
       "Investments": { "current": 0.04, "target": 100.00 }
@@ -46,18 +46,11 @@
       "remaining": 187.50,
       "previous_week": { "spent": 42.67, "underspend": 144.83, "moved_to": "Holding Pot" }
     },
-    "work_spending": {
-      "week_start": "2025-10-27",
-      "week_end": "2025-10-31",
-      "spent": 0.00,
-      "buffer_pot": "Work Buffer",
-      "transfer_day": "Friday"
-    },
     "goal_tracker": [
       { "pot": "Holiday Pot", "goal_name": "Cyprus 2026", "target_date": "2026-02-07", "target_amount": 297.79, "current": 74.45 },
       { "pot": "Coventry City F.C", "goal_name": "Season Fund", "target_date": "2026-05-30", "target_amount": 500.00, "current": 71.43 }
     ],
-    "last_sync": "2025-11-02T00:00:00Z"
+    "last_sync": "2025-11-03T00:00:00Z"
   },
 
   "isa": {
@@ -66,7 +59,7 @@
       "balance": 57380.50,
       "book_cost": 55126.16,
       "unrealised_gain": 2254.34,
-      "cash_balance": 504.10,
+      "cash_balance": 503.10,
       "last_dividend": { "ticker": "PHNX.GB", "amount": 401.22, "date": "2025-10-30" },
       "holdings": [
         { "ticker": "ASHM.GB", "shares": 620, "value": 1850.00, "book_cost": 1700.00 },
@@ -147,11 +140,5 @@
       { "month": "August 2026", "total_estimated_income": 284.69 },
       { "month": "September 2026", "total_estimated_income": 343.54 }
     ]
-  },
- "integrity": {
-    "checksum": "f08c2e2d7b9b4a6f94d1dce7caa1a1fdbb1e62a3cfb77534ae001ae989b4ed4f",
-    "last_validated": "2025-10-31T12:00:00Z",
-    "is_valid": true
- }
+  }
 }
-   
