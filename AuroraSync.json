@@ -66,7 +66,7 @@
       "balance": 57380.50,
       "book_cost": 55126.16,
       "unrealised_gain": 2254.34,
-      "cash_balance": 503.10,
+      "cash_balance": 504.10,
       "last_dividend": { "ticker": "PHNX.GB", "amount": 401.22, "date": "2025-10-30" },
       "holdings": [
         { "ticker": "ASHM.GB", "shares": 620, "value": 1850.00, "book_cost": 1700.00 },
