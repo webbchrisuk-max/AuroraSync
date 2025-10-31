@@ -1,40 +1,66 @@
-async function load(){
-  const res=await fetch("../AuroraSync.json");
-  const data=await res.json();
-  const m=data.monzo;
+// === Monzo Aurora Dashboard – Live JSON Data Loader === //
 
-  // Balances
-  const balEl=document.getElementById("balances");
-  balEl.innerHTML=`
-    <div class="row"><strong>Main:</strong> £${m.main_balance.toFixed(2)}</div>
-    <div class="row"><strong>Flex:</strong> £${m.flex_balance.toFixed(2)}</div>
-    <div class="row"><span class="badge">Next payday: ${m.next_payday}</span></div>
-    <div class="row"><span class="badge">Daily allowance: £${m.daily_allowance.toFixed(2)}</span></div>
-  `;
+async function loadMonzoData() {
+  try {
+    const response = await fetch("../AuroraSync.json?nocache=" + Date.now());
+    const data = await response.json();
 
-  // Weekly
-  const w=m.weekly_spending;
-  const remaining=(w.weekly_allowance - w.spent);
-  document.getElementById("weekly").innerHTML=`
-    <div>Week: ${w.week_start} → ${w.week_end}</div>
-    <div>Spent: £${w.spent.toFixed(2)}</div>
-    <div>Remaining: £${remaining.toFixed(2)}</div>
-    <div class="progress"><div style="width:${(w.spent/w.weekly_allowance*100).toFixed(1)}%"></div></div>
-  `;
+    // confirm data loaded
+    console.log("✅ Monzo data loaded:", data);
 
-  // Pots
-  const potsEl=document.getElementById("pots");
-  const pots=m.pots;
-  const rows=[];
-  for(const [name,val] of Object.entries(pots)){
-    const current=val.current??val.current_total??0;
-    const target=val.target??val.target_total??val.target??0;
-    const pct=target>0?Math.min(100,(current/target*100)):0;
-    rows.push(`
-      <tr><td>${name}</td><td>£${current.toFixed(2)}</td><td>£${(target||0).toFixed(2)}</td></tr>
-      <tr><td colspan="3"><div class="progress"><div style="width:${pct.toFixed(1)}%"></div></div></td></tr>
-    `);
+    // ===============================
+    //  MONZO ACCOUNT SUMMARY
+    // ===============================
+    const monzo = data.monzo || data; // adjust if nested later
+
+    document.getElementById("main-balance").textContent =
+      "£" + monzo.main_balance.toFixed(2);
+
+    document.getElementById("flex-balance").textContent =
+      "£" + monzo.flex_balance.toFixed(2);
+
+    document.getElementById("weekly-allowance").textContent =
+      "£" + monzo.weekly_allowance.toFixed(2);
+
+    document.getElementById("daily-allowance").textContent =
+      "£" + monzo.daily_allowance.toFixed(2);
+
+    document.getElementById("next-payday").textContent =
+      monzo.next_payday;
+
+    // ===============================
+    //  POTS OVERVIEW
+    // ===============================
+    const potsList = document.getElementById("pots-list");
+    potsList.innerHTML = ""; // clear placeholder items
+
+    for (const [potName, pot] of Object.entries(monzo.pots)) {
+      const li = document.createElement("li");
+
+      // show current vs target (rounded to 2dp)
+      li.innerHTML = `
+        <strong>${potName}</strong><br>
+        £${pot.current.toFixed(2)} / £${pot.target.toFixed(2)}
+      `;
+
+      potsList.appendChild(li);
+    }
+
+    // ===============================
+    //  LAST SYNC
+    // ===============================
+    if (document.getElementById("last-sync")) {
+      document.getElementById("last-sync").textContent = monzo.last_sync;
+    }
+
+  } catch (err) {
+    console.error("⚠️ Failed to load Monzo data:", err);
+    const error = document.createElement("p");
+    error.style.color = "#ff8080";
+    error.textContent = "Error loading data. Please refresh.";
+    document.body.appendChild(error);
   }
-  potsEl.innerHTML=`<table class="table"><thead><tr><th>Pot</th><th>Current</th><th>Target</th></tr></thead><tbody>${rows.join("")}</tbody></table>`;
 }
-document.addEventListener("DOMContentLoaded",load);
+
+// run when page finishes loading
+document.addEventListener("DOMContentLoaded", loadMonzoData);
