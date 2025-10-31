@@ -1,110 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Monzo Aurora</title>
 
-  <!-- Fonts & Styling -->
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="monzo.css">
-  <style>
-    body {
-      margin: 0;
-      font-family: "Orbitron", sans-serif;
-      background: radial-gradient(circle at top right, #05010f 0%, #0d0320 70%);
-      color: #fff;
-      min-height: 100vh;
-      padding: 20px;
-      overflow-x: hidden;
-    }
-    h1 {
-      text-align: center;
-      color: #00ffff;
-      text-shadow: 0 0 10px #00ffff;
-      margin-bottom: 30px;
-    }
-    .dashboard {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-      margin: 0 auto;
-      max-width: 1000px;
-    }
-    .card {
-      background: rgba(20, 20, 60, 0.25);
-      border: 1px solid rgba(0, 255, 255, 0.3);
-      border-radius: 12px;
-      padding: 20px;
-      box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
-      backdrop-filter: blur(10px);
-      transition: transform 0.3s ease;
-    }
-    .card:hover {
-      transform: translateY(-4px);
-    }
-    h2 {
-      font-size: 1.2em;
-      color: #0ff;
-      text-shadow: 0 0 5px #0ff;
-      border-bottom: 1px solid rgba(0, 255, 255, 0.3);
-      padding-bottom: 8px;
-      margin-bottom: 15px;
-    }
-    ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-    li {
-      margin: 5px 0;
-      font-size: 0.95em;
-    }
-    .sync-section {
-      text-align: center;
-      margin-top: 30px;
-      font-size: 0.9em;
-      opacity: 0.85;
-    }
-  </style>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="monzo.css?v=3">
 </head>
 
 <body>
-  <h1>💷 Monzo Aurora</h1>
+  <!-- === Navigation Bar === -->
+  <div class="nav-bar">
+    <a href="../index.html" class="back-btn">← Back to Nexus</a>
+  </div>
 
-  <div class="dashboard">
+  <!-- === Page Header === -->
+  <h1 style="margin-top:80px;">💷 Monzo Aurora</h1>
+
+  <!-- === Dashboard Grid === -->
+  <div class="grid">
     <div class="card">
       <h2>Balances</h2>
-      <p>Main: <span id="main-balance">Loading…</span></p>
-      <p>Flex: <span id="flex-balance">Loading…</span></p>
+      <p id="main-balance">Loading...</p>
     </div>
 
     <div class="card">
       <h2>Weekly Tracker</h2>
-      <p>Weekly Allowance: <span id="weekly-allowance">Loading…</span></p>
-      <p>Daily Allowance: <span id="daily-allowance">Loading…</span></p>
-      <p>Next Payday: <span id="next-payday">Loading…</span></p>
+      <p id="weekly-tracker">Loading...</p>
     </div>
 
     <div class="card">
       <h2>Pots Overview</h2>
-      <ul id="pots-list">
-        <li>Loading…</li>
-      </ul>
+      <div id="pots-list">Loading...</div>
     </div>
   </div>
 
-  <!-- === Last Sync Section (fixed & clean) === -->
-  <div class="sync-section">
-    <p><strong>Last Sync:</strong> <span id="last-sync">Loading…</span></p>
-  </div>
+  <!-- === Footer Status === -->
+  <footer>
+    <p id="last-sync" style="margin-top:20px;color:#f44;">Error loading data. Please refresh.</p>
+  </footer>
 
-  <!-- === JS Loader === -->
-  <script src="monzo.js"></script>
+  <!-- === JavaScript Loader === -->
+  <script>
+  async function loadMonzoData() {
+    try {
+      const response = await fetch("../AuroraSync.json?nocache=" + Date.now());
+      if (!response.ok) throw new Error("Network response not ok");
+      const data = await response.json();
 
- <!-- === Aurora Navigation Bar === -->
-<div class="nav-bar">
-  <a href="../index.html" class="back-btn">← Back to Nexus</a>
-</div>
+      console.log("✅ Monzo data loaded:", data);
+      const monzo = data.Monzo;
+      document.getElementById("main-balance").textContent = "£" + (monzo.main_balance ?? 0).toFixed(2);
+      document.getElementById("weekly-tracker").textContent = "£" + (monzo.weekly_spent ?? 0).toFixed(2);
+
+      const potsContainer = document.getElementById("pots-list");
+      potsContainer.innerHTML = "";
+      if (monzo.pots && Object.keys(monzo.pots).length) {
+        for (const [name, pot] of Object.entries(monzo.pots)) {
+          const div = document.createElement("div");
+          div.textContent = `${name}: £${pot.current.toFixed(2)} / £${pot.target.toFixed(2)}`;
+          potsContainer.appendChild(div);
+        }
+      } else {
+        potsContainer.innerHTML = "<em>No pots found in JSON</em>";
+      }
+
+      // Last Sync display
+      const lastSync = document.getElementById("last-sync");
+      const syncValue = monzo.last_sync || data.last_sync || null;
+      if (syncValue) {
+        const parsed = new Date(syncValue);
+        lastSync.textContent = "Last Sync: " + parsed.toLocaleString();
+        lastSync.style.color = "#0ff";
+      } else {
+        lastSync.textContent = "Last Sync: Unknown";
+        lastSync.style.color = "#f44";
+      }
+
+    } catch (err) {
+      console.error("⚠️ Monzo data error:", err);
+      document.getElementById("last-sync").textContent = "Error loading data. Please refresh.";
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", loadMonzoData);
+  </script>
 </body>
 </html>
