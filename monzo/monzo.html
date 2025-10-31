@@ -9,7 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="monzo.css?v=3">
+  <link rel="stylesheet" href="monzo.css?v=10">
 </head>
 
 <body>
@@ -18,76 +18,35 @@
     <a href="../index.html" class="back-btn">← Back to Nexus</a>
   </div>
 
-  <!-- === Page Header === -->
   <h1 style="margin-top:80px;">💷 Monzo Aurora</h1>
 
   <!-- === Dashboard Grid === -->
-  <div class="grid">
+  <div class="dashboard">
     <div class="card">
       <h2>Balances</h2>
-      <p id="main-balance">Loading...</p>
+      <p>Main Balance: <span id="main-balance">Loading...</span></p>
+      <p>Flex Balance: <span id="flex-balance">Loading...</span></p>
     </div>
 
     <div class="card">
       <h2>Weekly Tracker</h2>
-      <p id="weekly-tracker">Loading...</p>
+      <p>Weekly Allowance: <span id="weekly-allowance">Loading...</span></p>
+      <p>Spent This Week: <span id="weekly-spent">Loading...</span></p>
+      <p>Leftover: <span id="weekly-leftover">Loading...</span></p>
     </div>
 
     <div class="card">
       <h2>Pots Overview</h2>
-      <div id="pots-list">Loading...</div>
+      <ul id="pots-list">
+        <li>Loading pots...</li>
+      </ul>
     </div>
   </div>
 
-  <!-- === Footer Status === -->
-  <footer>
-    <p id="last-sync" style="margin-top:20px;color:#f44;">Error loading data. Please refresh.</p>
-  </footer>
+  <div class="sync-section">
+    <p id="last-sync">Loading sync status...</p>
+  </div>
 
-  <!-- === JavaScript Loader === -->
-  <script>
-  async function loadMonzoData() {
-    try {
-      const response = await fetch("../AuroraSync.json?nocache=" + Date.now());
-      if (!response.ok) throw new Error("Network response not ok");
-      const data = await response.json();
-
-      console.log("✅ Monzo data loaded:", data);
-      const monzo = data.Monzo;
-      document.getElementById("main-balance").textContent = "£" + (monzo.main_balance ?? 0).toFixed(2);
-      document.getElementById("weekly-tracker").textContent = "£" + (monzo.weekly_spent ?? 0).toFixed(2);
-
-      const potsContainer = document.getElementById("pots-list");
-      potsContainer.innerHTML = "";
-      if (monzo.pots && Object.keys(monzo.pots).length) {
-        for (const [name, pot] of Object.entries(monzo.pots)) {
-          const div = document.createElement("div");
-          div.textContent = `${name}: £${pot.current.toFixed(2)} / £${pot.target.toFixed(2)}`;
-          potsContainer.appendChild(div);
-        }
-      } else {
-        potsContainer.innerHTML = "<em>No pots found in JSON</em>";
-      }
-
-      // Last Sync display
-      const lastSync = document.getElementById("last-sync");
-      const syncValue = monzo.last_sync || data.last_sync || null;
-      if (syncValue) {
-        const parsed = new Date(syncValue);
-        lastSync.textContent = "Last Sync: " + parsed.toLocaleString();
-        lastSync.style.color = "#0ff";
-      } else {
-        lastSync.textContent = "Last Sync: Unknown";
-        lastSync.style.color = "#f44";
-      }
-
-    } catch (err) {
-      console.error("⚠️ Monzo data error:", err);
-      document.getElementById("last-sync").textContent = "Error loading data. Please refresh.";
-    }
-  }
-
-  document.addEventListener("DOMContentLoaded", loadMonzoData);
-  </script>
+  <script src="monzo.js?v=10"></script>
 </body>
 </html>
