@@ -2,7 +2,7 @@
 
 async function loadMonzoData() {
   try {
-    const response = await fetch("../AuroraSync.json?nocache=" + Date.now());
+    const response = await fetch("/AuroraSync.json?nocache=" + Date.now());
     const data = await response.json();
 
     // confirm data loaded
