@@ -1,42 +1,71 @@
-<body>
-  <!-- === Navigation Bar === -->
-  <div class="nav-bar">
-    <a href="../index.html" class="back-btn">← Back to Nexus</a>
-  </div>
+// === Monzo Aurora Dashboard Loader – Stable Fixed Build ===
+// Fetch and load Monzo section from AuroraSync.json
 
-  <!-- === Page Header === -->
-  <h1 style="margin-top:80px;">💷 Monzo Aurora</h1>
+async function loadMonzoData() {
+  try {
+    const response = await fetch("/AuroraSync/AuroraSync.json?nocache=" + Date.now());
+    if (!response.ok) throw new Error("Network error: " + response.status);
+    const data = await response.json();
 
-  <!-- === Dashboard Grid === -->
-  <div class="grid">
-    <!-- BALANCES -->
-    <div class="card">
-      <h2>Balances</h2>
-      <p>Main Balance: <span id="main-balance">Loading...</span></p>
-      <p>Flex Balance: <span id="flex-balance">Loading...</span></p>
-    </div>
+    // ✅ Use lowercase "monzo" key from JSON
+    const monzo = data.monzo;
+    console.log("✅ Monzo data loaded:", monzo);
 
-    <!-- WEEKLY TRACKER -->
-<div class="card">
-  <h2>Weekly Tracker</h2>
-  <p>Spent So Far: <span id="weekly-spent">Loading...</span></p>
-  <p>Weekly Allowance: <span id="weekly-allowance">Loading...</span></p>
-  <p>Daily Allowance: <span id="daily-allowance">Loading...</span></p>
-  <p>Next Payday: <span id="next-payday">Loading...</span></p>
-</div>
+    // === BALANCES ===
+    document.getElementById("main-balance").textContent =
+      "£" + (monzo.main_balance ?? 0).toFixed(2);
 
-    <!-- POTS OVERVIEW -->
-    <div class="card">
-      <h2>Pots Overview</h2>
-      <div id="pots-list">Loading...</div>
-    </div>
-  </div>
+    document.getElementById("flex-balance").textContent =
+      "£" + (monzo.flex_balance ?? 0).toFixed(2);
 
-  <!-- === Footer Status === -->
-  <footer>
-    <p id="last-sync" style="margin-top:20px;">Last Sync: —</p>
-  </footer>
+    // === WEEKLY TRACKER ===
+    document.getElementById("weekly-spent").textContent =
+      "£" + (monzo.weekly_spent ?? 0).toFixed(2);
 
-  <!-- === JavaScript Loader === -->
-  <script src="monzo.js?V=3"></script>
-</body>
+    document.getElementById("weekly-allowance").textContent =
+      "£" + (monzo.weekly_allowance ?? 0).toFixed(2);
+
+    document.getElementById("daily-allowance").textContent =
+      "£" + (monzo.daily_allowance ?? 0).toFixed(2);
+
+    document.getElementById("next-payday").textContent =
+      monzo.next_payday ?? "—";
+
+    // === POTS OVERVIEW ===
+    const potsContainer = document.getElementById("pots-list");
+    potsContainer.innerHTML = "";
+
+    if (monzo.pots && Object.keys(monzo.pots).length) {
+      for (const [name, pot] of Object.entries(monzo.pots)) {
+        const li = document.createElement("li");
+        const current = pot.current ?? 0;
+        const target = pot.target ?? 0;
+        li.innerHTML = `
+          <strong>${name}</strong><br>
+          £${current.toFixed(2)} / £${target.toFixed(2)}
+        `;
+        potsContainer.appendChild(li);
+      }
+    } else {
+      potsContainer.innerHTML = "<em>No pots found in JSON</em>";
+    }
+
+    // === LAST SYNC TIMESTAMP ===
+    const lastSyncElement = document.getElementById("last-sync");
+    if (monzo.last_sync) {
+      const parsed = new Date(monzo.last_sync);
+      lastSyncElement.textContent = "Last Sync: " + parsed.toLocaleString();
+    } else {
+      lastSyncElement.textContent = "Last Sync: " + new Date().toLocaleString();
+    }
+
+  } catch (err) {
+    console.error("❌ Error loading Monzo data:", err);
+    const lastSyncElement = document.getElementById("last-sync");
+    if (lastSyncElement)
+      lastSyncElement.textContent = "Error loading data. Please refresh.";
+  }
+}
+
+// === Trigger once DOM ready ===
+document.addEventListener("DOMContentLoaded", loadMonzoData);
