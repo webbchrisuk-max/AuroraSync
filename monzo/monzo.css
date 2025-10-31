@@ -17,7 +17,7 @@ body {
   color: var(--text);
   background: radial-gradient(circle at top right, #05010f 0%, #0d0320 70%);
   background-attachment: fixed;
-  animation: pulseBG 18s ease-in-out infinite alternate;
+  animation: pulseBG 10s ease-in-out infinite alternate;
   min-height: 100vh;
   padding: 20px;
 }
