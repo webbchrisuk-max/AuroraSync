@@ -13,7 +13,7 @@
     "archive_previous_week"
   ],
   "last_rollover": "2025-10-25T00:00:00Z",
-  "next_rollover": "2025-11-01T00:00:"weekly_rollover": {
+  "next_rollover": "2025-11-01T00:00:"weekly_rollover",
   "enabled": true,
   "day": "Friday",
   "time": "00:00",
