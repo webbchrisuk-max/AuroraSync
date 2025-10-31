@@ -1,52 +1,42 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Monzo Aurora</title>
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="monzo.css?v=10">
-</head>
-
 <body>
   <!-- === Navigation Bar === -->
   <div class="nav-bar">
     <a href="../index.html" class="back-btn">← Back to Nexus</a>
   </div>
 
+  <!-- === Page Header === -->
   <h1 style="margin-top:80px;">💷 Monzo Aurora</h1>
 
   <!-- === Dashboard Grid === -->
-  <div class="dashboard">
+  <div class="grid">
+    <!-- BALANCES -->
     <div class="card">
       <h2>Balances</h2>
       <p>Main Balance: <span id="main-balance">Loading...</span></p>
       <p>Flex Balance: <span id="flex-balance">Loading...</span></p>
     </div>
 
+    <!-- WEEKLY TRACKER -->
     <div class="card">
       <h2>Weekly Tracker</h2>
+      <p id="weekly-tracker">Loading...</p>
       <p>Weekly Allowance: <span id="weekly-allowance">Loading...</span></p>
-      <p>Spent This Week: <span id="weekly-spent">Loading...</span></p>
-      <p>Leftover: <span id="weekly-leftover">Loading...</span></p>
+      <p>Daily Allowance: <span id="daily-allowance">Loading...</span></p>
+      <p>Next Payday: <span id="next-payday">Loading...</span></p>
     </div>
 
+    <!-- POTS OVERVIEW -->
     <div class="card">
       <h2>Pots Overview</h2>
-      <ul id="pots-list">
-        <li>Loading pots...</li>
-      </ul>
+      <div id="pots-list">Loading...</div>
     </div>
   </div>
 
-  <div class="sync-section">
-    <p id="last-sync">Loading sync status...</p>
-  </div>
+  <!-- === Footer Status === -->
+  <footer>
+    <p id="last-sync" style="margin-top:20px;">Last Sync: —</p>
+  </footer>
 
-  <script src="monzo.js?v=10"></script>
+  <!-- === JavaScript Loader === -->
+  <script src="monzo.js"></script>
 </body>
-</html>
