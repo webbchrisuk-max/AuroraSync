@@ -11,7 +11,7 @@ h2{margin:0 0 10px 0}
 .badge{display:inline-block;padding:2px 8px;border-radius:99px;border:1px solid rgba(255,255,255,.2)}
 .progress{height:10px;background:#1b1b2e;border-radius:8px;overflow:hidden;margin-top:6px}
 .progress > div{height:100%;background:linear-gradient(90deg,#00fff2,#7bffea);width:0}
-/* === Aurora Navigation Bar === */
-.nav-bar{position:sticky;top:0;background:rgba(0,0,0,.4);padding:12px 20px;text-align:left;z-index:1000;border-bottom:1px solid rgba(0,255,255,.3);backdrop-filter:blur(8px);}
-.back-btn{color:#0ff;text-decoration:none;font-weight:600;letter-spacing:.5px;text-shadow:0 0 6px #0ff;transition:color .2s;}
-.back-btn:hover{color:#fff;}
+/* === Aurora Navigation Bar (Button Style Match) === */
+.nav-bar{position:sticky;top:0;background:rgba(0,0,0,.4);padding:12px 20px;text-align:right;z-index:1000;border-bottom:1px solid rgba(0,255,255,.3);backdrop-filter:blur(8px);}
+.back-btn{display:inline-block;padding:6px 14px;border:1px solid rgba(0,255,255,.6);border-radius:8px;color:#0ff;text-decoration:none;font-weight:600;letter-spacing:.3px;text-shadow:0 0 6px #0ff;box-shadow:0 0 12px rgba(0,255,255,.2) inset;transition:all .2s ease;}
+.back-btn:hover{background:rgba(0,255,255,.15);color:#fff;box-shadow:0 0 16px rgba(0,255,255,.5) inset;}
