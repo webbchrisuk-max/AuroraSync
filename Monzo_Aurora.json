@@ -13,7 +13,23 @@
     "archive_previous_week"
   ],
   "last_rollover": "2025-10-25T00:00:00Z",
-  "next_rollover": "2025-11-01T00:00:00Z"
+  "next_rollover": "2025-11-01T00:00:"weekly_rollover": {
+  "enabled": true,
+  "day": "Friday",
+  "time": "00:00",
+  "actions": [
+    "reset_weekly_spending",
+    "recalculate_allowance",
+    "archive_previous_week",
+    "move_underspend_to_holding"
+  ],
+  "last_rollover": "2025-10-25T00:00:00Z",
+  "next_rollover": "2025-11-01T00:00:00Z",
+  "rules": {
+    "move_underspend_to_holding": true,
+    "target_pot": "Holding Pot"
+  }
+}
 }
   "daily_allowance": 26.79,
   "next_payday": "2025-11-07",
