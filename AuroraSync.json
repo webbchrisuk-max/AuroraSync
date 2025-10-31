@@ -147,13 +147,11 @@
       { "month": "August 2026", "total_estimated_income": 284.69 },
       { "month": "September 2026", "total_estimated_income": 343.54 }
     ]
-  }
+  },
+ "integrity": {
+    "checksum": "f08c2e2d7b9b4a6f94d1dce7caa1a1fdbb1e62a3cfb77534ae001ae989b4ed4f",
+    "last_validated": "2025-10-31T12:00:00Z",
+    "is_valid": true
+ }
 }
-,
-"integrity": {
-  "checksum": "f08c2e2d7b9b4a6f94d1dce7caa1a1fdbb1e62a3cfb77534ae001ae989b4ed4f",
-  "last_validated": "2025-10-31T12:00:00Z",
-  "is_valid": true
-}
-
-
+   
