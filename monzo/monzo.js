@@ -15,6 +15,7 @@ async function loadMonzoData() {
     document.getElementById("main-balance").textContent = "£" + (monzo.main_balance ?? 0).toFixed(2);
     if (monzo.flex_balance !== undefined)
       document.getElementById("flex-balance").textContent = "£" + monzo.flex_balance.toFixed(2);
+    
     // === WEEKLY TRACKER ==
     document.getElementById("weekly-spent").textContent =
   "£" + (monzo.weekly_spent ?? 0).toFixed(2);
