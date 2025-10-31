@@ -40,10 +40,7 @@ async function loadMonzoData() {
     // === LAST SYNC ===
     const lastSyncElement = document.getElementById("last-sync");
     const syncValue =
-      monzo.last_sync ||
-      data.last_sync ||
-      data.MonzoSync ||
-      null;
+      monzo.last_sync || data.last_sync || data.MonzoSync || null;
 
     if (syncValue) {
       const parsed = new Date(syncValue);
