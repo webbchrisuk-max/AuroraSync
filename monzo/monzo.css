@@ -1,23 +1,23 @@
 /* =========================================================
-   MONZO AURORA DASHBOARD – CLEAN FORMATTED VERSION
-   Subtle Glow Edition (Balanced Neon Theme)
+   MONZO AURORA DASHBOARD – LANDSCAPE 3-COLUMN LAYOUT
+   Subtle Glow Edition
    ========================================================= */
 
 :root {
-  --glow: #5af7e0; /* Softer cyan glow */
-  --accent: #ff66cc;
+  --glow: #5af7e0;   /* Soft cyan glow */
+  --accent: #5af7e0;
   --panel: rgba(6, 20, 60, 0.88);
   --text: #f4f4f4;
 }
 
-/* === BASE STYLES === */
+/* === BASE === */
 body {
   margin: 0;
   font-family: "Inter", system-ui, sans-serif;
   color: var(--text);
   background: radial-gradient(circle at top right, #05010f 0%, #0d0320 70%);
   background-attachment: fixed;
-  animation: pulseBG 10s ease-in-out infinite alternate;
+  animation: pulseBG 18s ease-in-out infinite alternate;
   min-height: 100vh;
   padding: 20px;
 }
@@ -45,7 +45,7 @@ header h1 {
   font-size: 1.8em;
   margin: 0 auto;
   color: var(--glow);
-  text-shadow: 0 0 6px rgba(0, 255, 246, 0.5);
+  text-shadow: 0 0 6px rgba(0, 255, 246, 0.4);
 }
 
 /* === BACK BUTTON === */
@@ -64,17 +64,24 @@ header h1 {
 
 .back:hover {
   background: rgba(0, 255, 255, 0.2);
-  box-shadow: 0 0 12px rgba(0, 255, 255, 0.6);
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.5);
 }
 
-/* === GRID LAYOUT === */
+/* === GRID (LOCKED TO 3 COLUMNS) === */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
 
-/* === DASHBOARD CARDS === */
+/* Collapse neatly on small screens (portrait/mobile) */
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+}
+
+/* === CARD STYLES === */
 .card {
   background: var(--panel);
   border: 1px solid rgba(0, 255, 255, 0.25);
@@ -85,20 +92,20 @@ header h1 {
 }
 
 .card:hover {
-  box-shadow: 0 0 20px rgba(0, 255, 255, 0.25);
+  box-shadow: 0 0 22px rgba(0, 255, 255, 0.25);
 }
 
 /* === CARD HEADINGS === */
 h2 {
   color: var(--accent);
   font-size: 1.2em;
-  text-shadow: 0 0 4px rgba(0, 255, 255, 0.4);
+  text-shadow: 0 0 4px rgba(0, 255, 255, 0.3);
   border-bottom: 1px solid rgba(0, 255, 255, 0.25);
   padding-bottom: 6px;
   margin-bottom: 10px;
 }
 
-/* === LISTS (POTS) === */
+/* === POTS LIST === */
 ul {
   list-style: none;
   padding-left: 0;
