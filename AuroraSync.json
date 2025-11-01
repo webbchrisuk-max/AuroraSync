@@ -20,21 +20,50 @@
       "unrealised_gain_percent": 3.87,
       "cash_balance": 503.10,
       "last_updated": "2025-11-02 23:59",
-      "holdings": []
+      "holdings": [
+        {"ticker":"ASHM.GB","name":"Ashmore Group PLC","shares":620,"average_price":160.4032,"latest_price":180.21,"book_cost":994.50,"value":1164.98,"pl_value":170.48,"pl_percent":17.14},
+        {"ticker":"ASTRID.GB","name":"Astrid Intelligence PLC","shares":617065,"average_price":0.4845,"latest_price":0.212,"book_cost":2899.92,"value":740.48,"pl_value":-2249.44,"pl_percent":-75.24},
+        {"ticker":"BP.GB","name":"BP PLC","shares":707,"average_price":421.6393,"latest_price":442.50,"book_cost":2890.99,"value":3127.06,"pl_value":146.07,"pl_percent":4.90},
+        {"ticker":"IUKD.GB","name":"iShares UK Dividend UCITS ETF","shares":343,"average_price":840.0962,"latest_price":888.50,"book_cost":2881.53,"value":3037.26,"pl_value":155.74,"pl_percent":5.40},
+        {"ticker":"LAND.GB","name":"Land Securities Group PLC","shares":317,"average_price":556.2997,"latest_price":621.50,"book_cost":1763.47,"value":1970.16,"pl_value":206.68,"pl_percent":11.72},
+        {"ticker":"LGEN.GB","name":"Legal & General Group PLC","shares":3445,"average_price":234.4534,"latest_price":237.80,"book_cost":8076.92,"value":8192.21,"pl_value":115.29,"pl_percent":1.42},
+        {"ticker":"LLOY.GB","name":"Lloyds Banking Group PLC","shares":606,"average_price":82.0,"latest_price":89.08,"book_cost":496.92,"value":539.82,"pl_value":42.90,"pl_percent":8.63},
+        {"ticker":"MNG.GB","name":"M&G PLC","shares":3916,"average_price":204.9709,"latest_price":263.30,"book_cost":8026.66,"value":10310.83,"pl_value":2284.17,"pl_percent":28.40},
+        {"ticker":"NG.GB","name":"National Grid PLC","shares":192,"average_price":1032.8177,"latest_price":1140.00,"book_cost":1983.01,"value":2188.80,"pl_value":205.79,"pl_percent":10.37},
+        {"ticker":"PHNX.GB","name":"Phoenix Group Holdings","shares":1467,"average_price":654.6933,"latest_price":673.00,"book_cost":9604.35,"value":9887.58,"pl_value":283.23,"pl_percent":2.94},
+        {"ticker":"SVT.GB","name":"Severn Trent PLC","shares":78,"average_price":2545.4103,"latest_price":2781.00,"book_cost":1985.42,"value":2169.18,"pl_value":183.76,"pl_percent":9.20},
+        {"ticker":"SUPR.GB","name":"Supermarket Income REIT PLC","shares":8055,"average_price":78.7820,"latest_price":79.10,"book_cost":6345.89,"value":6371.50,"pl_value":25.62,"pl_percent":0.40},
+        {"ticker":"BBOX.GB","name":"Tritax Big Box REIT Plc","shares":350,"average_price":141.7914,"latest_price":150.10,"book_cost":496.27,"value":525.35,"pl_value":29.08,"pl_percent":5.85},
+        {"ticker":"VOD.GB","name":"Vodafone Group PLC","shares":7658,"average_price":84.8826,"latest_price":92.14,"book_cost":6500.31,"value":7056.08,"pl_value":555.77,"pl_percent":8.55}
+      ]
     },
     "trade212": {
       "account_name": "Trade212 ISA",
       "balance": 1949.04,
       "cash_balance": 29.34,
       "unrealised_gain": -31.37,
-      "holdings": []
+      "last_updated": "2025-11-02 23:59",
+      "holdings": [
+        {"ticker":"GCP.GB","name":"GCP Infrastructure Investments Ltd","average_price":0.749,"pl_value":-23.00},
+        {"ticker":"FSFL.GB","name":"Foresight Solar Fund Ltd","average_price":0.7830,"pl_value":13.90},
+        {"ticker":"PHP.GB","name":"Primary Health Properties PLC","average_price":0.92,"pl_value":4.93},
+        {"ticker":"SEQI.GB","name":"Sequoia Economic Infrastructure Income Fund Ltd","average_price":0.7760,"pl_value":0.60}
+      ]
     },
     "tesco_shares": {
       "account_name": "Tesco Share Account",
       "total_value": 72782.02,
       "book_cost": 35952.28,
       "unrealised_gain": 36829.74,
-      "unrealised_gain_percent": 102.4
+      "unrealised_gain_percent": 102.4,
+      "plans": {
+        "SIP": {"shares":1619,"value":7372.92,"book_cost":4353.68,"gain":3019.24},
+        "SAYE": {"shares":14363,"value":65409.10,"book_cost":31598.60,"gain":33810.50,"monthly_contribution":500.0,"total_contributions":11000.0}
+      },
+      "holdings": [
+        {"ticker":"TSCO.SIP","value":7372.92,"book_cost":4353.68,"pl_percent":69.3},
+        {"ticker":"TSCO.SAYE","value":65409.10,"book_cost":31598.60,"pl_percent":107.0}
+      ]
     }
   },
   "dividend_planner": {
@@ -49,59 +78,40 @@
       "status": "upcoming"
     },
     "monthly_breakdown": [
-      { "month": "Nov 2025", "total_estimated_income": 149.85 },
-      { "month": "Dec 2025", "total_estimated_income": 171.32 },
-      { "month": "Jan 2026", "total_estimated_income": 100.02 },
-      { "month": "Feb 2026", "total_estimated_income": 292.06 },
-      { "month": "Mar 2026", "total_estimated_income": 116.24 },
-      { "month": "Apr 2026", "total_estimated_income": 30.96 },
-      { "month": "May 2026", "total_estimated_income": 1108.44 },
-      { "month": "Jun 2026", "total_estimated_income": 678.20 },
-      { "month": "Jul 2026", "total_estimated_income": 152.01 },
-      { "month": "Aug 2026", "total_estimated_income": 284.69 },
-      { "month": "Sep 2026", "total_estimated_income": 343.54 }
-      { "month": "Oct 2026", "total_estimated_income": 710.59 }
-      { "month": "Oct 2026", "total_estimated_income": 710.59 },
+      {"month":"Oct 2025","total_estimated_income":1677.43},
+      {"month":"Nov 2025","total_estimated_income":291.44},
+      {"month":"Dec 2025","total_estimated_income":153.83},
+      {"month":"Jan 2026","total_estimated_income":100.02},
+      {"month":"Feb 2026","total_estimated_income":292.06},
+      {"month":"Mar 2026","total_estimated_income":116.24},
+      {"month":"Apr 2026","total_estimated_income":30.96},
+      {"month":"May 2026","total_estimated_income":1108.44},
+      {"month":"Jun 2026","total_estimated_income":678.21},
+      {"month":"Jul 2026","total_estimated_income":152.00},
+      {"month":"Aug 2026","total_estimated_income":284.69},
+      {"month":"Sep 2026","total_estimated_income":343.54}
     ]
   },
   "watchlist": {
     "entries": [
-      {
-        "ticker": "BATS.GB",
-        "name": "British American Tobacco plc",
-        "dividend_yield": 6.1,
-        "category": "High-yield / Consumer Defensive"
-      },
-      {
-        "ticker": "ULVR.GB",
-        "name": "Unilever plc",
-        "dividend_yield": 3.5,
-        "category": "Stable income / Consumer Goods"
-      }
+      {"ticker":"BATS.GB","name":"British American Tobacco plc","dividend_yield":6.1,"category":"High-yield / Consumer Defensive"},
+      {"ticker":"ULVR.GB","name":"Unilever plc","dividend_yield":3.5,"category":"Stable income / Consumer Goods"}
     ]
   },
   "income": {
     "interest_log": [
-      {
-        "id": "monzo-safetynet-2025-10",
-        "source": "Monzo",
-        "account": "Safety Net",
-        "month": "2025-10",
-        "amount_gbp": 1.0,
-        "posted_date": "2025-10-31",
-        "notes": "Monthly interest"
-      }
+      {"id":"monzo-safetynet-2025-10","source":"Monzo","account":"Safety Net","month":"2025-10","amount_gbp":1.0,"posted_date":"2025-10-31","notes":"Monthly interest"}
     ]
   },
   "finance_summary": {
     "total_interest_ytd": 1.0,
     "last_interest_source": "Monzo Safety Net",
     "last_interest_month": "October 2025",
-    "bank_interest_breakdown": { "Monzo_Safety_Net": 1.0 },
+    "bank_interest_breakdown": {"Monzo_Safety_Net":1.0},
     "next_dividend": "Supermarket Income REIT (SUPR.GB) – £124.44 on 21 Nov 2025"
   },
   "integrity": {
-    "checksum": "sha256:d1e43bffb3cdb0aaf7a66dcd3f13e91d7897a1bfc83d52a38c58e474be84a20f",
+    "checksum": "sha256:5d6c44e3f7b8d59a03f68d77884c37ae26dbf9f95a9eac2ce3b1f99283e26e6a",
     "is_valid": true,
     "last_validated": "2025-11-02T23:59:00Z"
   }
