@@ -56,6 +56,29 @@
       "book_cost": 35952.28,
       "unrealised_gain": 36829.74,
       "unrealised_gain_percent": 102.4,
+
+      "plans": {
+        "SIP": {
+          "shares": 1619,
+          "value": 7372.92,
+          "book_cost": 4353.68,
+          "gain": 3019.24,
+          "status_breakdown": {
+            "Available": 150,
+            "Conditional": 1328,
+            "Locked_in": 141
+          }
+        },
+        "SAYE": {
+          "shares": 14363,
+          "value": 65409.10,
+          "book_cost": 31598.60,
+          "gain": 33810.50,
+          "monthly_contribution": 500.00,
+          "total_contributions": 11000.00
+        }
+      },
+
       "holdings": [
         {"ticker": "TSCO.SIP",  "value": 7372.92,  "book_cost": 4353.68},
         {"ticker": "TSCO.SAYE", "value": 65409.10, "book_cost": 31598.60}
