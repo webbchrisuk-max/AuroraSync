@@ -150,22 +150,185 @@
   },
 
   "dividend_planner": {
-  "annual_total": 3225.44,
-  "received_ytd": 2440.10,
-  "forecast_total": 3225.44,
+  "annual_total": 5104.78,
+  "received_ytd": 1677.43,
+  "forecast_total": 5104.78,
+
   "monthly_breakdown": [
-    {"month": "Jan", "total_estimated_income": 250.00},
-    {"month": "Feb", "total_estimated_income": 180.00},
-    {"month": "Mar", "total_estimated_income": 295.00},
-    {"month": "Apr", "total_estimated_income": 210.00},
-    {"month": "May", "total_estimated_income": 340.00},
-    {"month": "Jun", "total_estimated_income": 265.00},
-    {"month": "Jul", "total_estimated_income": 310.00},
-    {"month": "Aug", "total_estimated_income": 220.00},
-    {"month": "Sep", "total_estimated_income": 410.00},
-    {"month": "Oct", "total_estimated_income": 325.00},
-    {"month": "Nov", "total_estimated_income": 275.00},
-    {"month": "Dec", "total_estimated_income": 165.00}
+    {"month": "Oct 2025", "total_estimated_income": 1677.43},
+    {"month": "Nov 2025", "total_estimated_income": 167.00},
+    {"month": "Dec 2025", "total_estimated_income": 153.83},
+    {"month": "Jan 2026", "total_estimated_income": 100.02},
+    {"month": "Feb 2026", "total_estimated_income": 292.06},
+    {"month": "Mar 2026", "total_estimated_income": 116.24},
+    {"month": "Apr 2026", "total_estimated_income": 30.96},
+    {"month": "May 2026", "total_estimated_income": 1108.44},
+    {"month": "Jun 2026", "total_estimated_income": 678.21},
+    {"month": "Jul 2026", "total_estimated_income": 152.00},
+    {"month": "Aug 2026", "total_estimated_income": 284.69},
+    {"month": "Sep 2026", "total_estimated_income": 343.54}
+  ],
+
+  "schedule_by_holding": [
+    {
+      "ticker": "MNG.GB",
+      "name": "M&G plc",
+      "frequency": "Semiannual",
+      "forecast_payouts": [
+        {"month": "Oct 2025", "amount": 1276.21},
+        {"month": "May 2026", "amount": 527.09}
+      ]
+    },
+    {
+      "ticker": "PHNX.GB",
+      "name": "Phoenix Group Holdings plc",
+      "frequency": "Semiannual",
+      "forecast_payouts": [
+        {"month": "Oct 2025", "amount": 401.22},
+        {"month": "May 2026", "amount": 413.14}
+      ]
+    },
+    {
+      "ticker": "LGEN.GB",
+      "name": "Legal & General Group plc",
+      "frequency": "Semiannual",
+      "forecast_payouts": [
+        {"month": "Jun 2026", "amount": 539.73},
+        {"month": "Sep 2026", "amount": 214.96}
+      ]
+    },
+    {
+      "ticker": "BP.GB",
+      "name": "BP plc",
+      "frequency": "Quarterly",
+      "forecast_payouts": [
+        {"month": "Dec 2025", "amount": 45.20},
+        {"month": "Mar 2026", "amount": 45.80},
+        {"month": "Jun 2026", "amount": 46.27},
+        {"month": "Sep 2026", "amount": 46.79}
+      ]
+    },
+    {
+      "ticker": "IUKD.GB",
+      "name": "iShares UK Dividend ETF",
+      "frequency": "Quarterly",
+      "forecast_payouts": [
+        {"month": "Dec 2025", "amount": 33.61},
+        {"month": "Mar 2026", "amount": 15.54},
+        {"month": "Jun 2026", "amount": 68.01},
+        {"month": "Sep 2026", "amount": 49.25}
+      ]
+    },
+    {
+      "ticker": "VOD.GB",
+      "name": "Vodafone Group plc",
+      "frequency": "Semiannual",
+      "forecast_payouts": [
+        {"month": "Feb 2026", "amount": 138.28},
+        {"month": "Aug 2026", "amount": 130.68}
+      ]
+    },
+    {
+      "ticker": "FSFL.GB",
+      "name": "Foresight Solar Fund Ltd",
+      "frequency": "Quarterly",
+      "forecast_payouts": [
+        {"month": "Feb 2026", "amount": 18.71},
+        {"month": "May 2026", "amount": 18.71},
+        {"month": "Aug 2026", "amount": 18.94}
+      ]
+    },
+    {
+      "ticker": "SUPR.GB",
+      "name": "Supermarket Income REIT plc",
+      "frequency": "Quarterly",
+      "forecast_payouts": [
+        {"month": "Feb 2026", "amount": 124.44},
+        {"month": "May 2026", "amount": 124.44},
+        {"month": "Aug 2026", "amount": 124.44}
+      ]
+    },
+    {
+      "ticker": "GCP.GB",
+      "name": "GCP Infrastructure Investments Ltd",
+      "frequency": "Quarterly",
+      "forecast_payouts": [
+        {"month": "Mar 2026", "amount": 17.50},
+        {"month": "Jun 2026", "amount": 17.50},
+        {"month": "Sep 2026", "amount": 17.50}
+      ]
+    },
+    {
+      "ticker": "BBOX.GB",
+      "name": "Tritax Big Box REIT plc",
+      "frequency": "Quarterly",
+      "forecast_payouts": [
+        {"month": "Mar 2026", "amount": 7.64},
+        {"month": "Jun 2026", "amount": 6.70},
+        {"month": "Sep 2026", "amount": 6.70}
+      ]
+    },
+    {
+      "ticker": "LAND.GB",
+      "name": "Land Securities Group plc",
+      "frequency": "Quarterly",
+      "forecast_payouts": [
+        {"month": "Jan 2026", "amount": 30.42},
+        {"month": "Apr 2026", "amount": 30.96}
+      ]
+    },
+    {
+      "ticker": "SVT.GB",
+      "name": "Severn Trent plc",
+      "frequency": "Semiannual",
+      "forecast_payouts": [
+        {"month": "Jan 2026", "amount": 39.48}
+      ]
+    },
+    {
+      "ticker": "NG.GB",
+      "name": "National Grid plc",
+      "frequency": "Semiannual",
+      "forecast_payouts": [
+        {"month": "Jan 2026", "amount": 30.12}
+      ]
+    },
+    {
+      "ticker": "ASHM.GB",
+      "name": "Ashmore Group plc",
+      "frequency": "Semiannual",
+      "forecast_payouts": [
+        {"month": "Dec 2025", "amount": 75.02},
+        {"month": "Mar 2026", "amount": 29.76}
+      ]
+    },
+    {
+      "ticker": "PHP.GB",
+      "name": "Primary Health Properties plc",
+      "frequency": "Quarterly",
+      "forecast_payouts": [
+        {"month": "Feb 2026", "amount": 5.48},
+        {"month": "May 2026", "amount": 5.48},
+        {"month": "Aug 2026", "amount": 5.48}
+      ]
+    },
+    {
+      "ticker": "SEQI.GB",
+      "name": "Sequoia Economic Infrastructure Fund Ltd",
+      "frequency": "Quarterly",
+      "forecast_payouts": [
+        {"month": "Feb 2026", "amount": 5.15},
+        {"month": "Aug 2026", "amount": 5.15}
+      ]
+    },
+    {
+      "ticker": "LLOY.GB",
+      "name": "Lloyds Banking Group plc",
+      "frequency": "Semiannual",
+      "forecast_payouts": [
+        {"month": "May 2026", "amount": 14.43},
+        {"month": "Sep 2026", "amount": 8.34}
+      ]
+    }
   ]
-}
 }
