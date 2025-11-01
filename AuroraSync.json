@@ -38,16 +38,58 @@
       ]
     },
     "trade212": {
-      "account_name": "Trade212 ISA",
-      "balance": 1949.04,
-      "cash_balance": 29.34,
-      "unrealised_gain": -31.37,
-      "last_updated": "2025-11-02 23:59",
-      "holdings": [
-        {"ticker":"GCP.GB","name":"GCP Infrastructure Investments Ltd","average_price":0.749,"pl_value":-23.00},
-        {"ticker":"FSFL.GB","name":"Foresight Solar Fund Ltd","average_price":0.7830,"pl_value":13.90},
-        {"ticker":"PHP.GB","name":"Primary Health Properties PLC","average_price":0.92,"pl_value":4.93},
-        {"ticker":"SEQI.GB","name":"Sequoia Economic Infrastructure Income Fund Ltd","average_price":0.7760,"pl_value":0.60}
+  "account_name": "Trade212 ISA",
+  "balance": 1949.04,
+  "cash_balance": 29.34,
+  "unrealised_gain": -32.75,
+  "last_updated": "2025-11-02 23:59",
+  "holdings": [
+    {
+      "ticker": "GCP.GB",
+      "name": "GCP Infrastructure Investments Ltd",
+      "shares": 1000,
+      "average_price": 0.7490,
+      "latest_price": 0.7260,
+      "book_cost": 749.00,
+      "value": 726.00,
+      "pl_value": -23.00,
+      "pl_percent": -3.07
+    },
+    {
+      "ticker": "FSFL.GB",
+      "name": "Foresight Solar Fund Ltd",
+      "shares": 924,
+      "average_price": 0.7832,
+      "latest_price": 0.7680,
+      "book_cost": 723.53,
+      "value": 709.63,
+      "pl_value": -13.90,
+      "pl_percent": -1.92
+    },
+    {
+      "ticker": "PHP.GB",
+      "name": "Primary Health Properties PLC",
+      "shares": 299,
+      "average_price": 0.9246,
+      "latest_price": 0.9365,
+      "book_cost": 276.46,
+      "value": 280.01,
+      "pl_value": 3.55,
+      "pl_percent": 1.28
+    },
+    {
+      "ticker": "SEQI.GB",
+      "name": "Sequoia Economic Infrastructure Income Fund Ltd",
+      "shares": 300,
+      "average_price": 0.7760,
+      "latest_price": 0.7780,
+      "book_cost": 232.80,
+      "value": 233.40,
+      "pl_value": 0.60,
+      "pl_percent": 0.26
+    }
+  ]
+}
       ]
     },
     "tesco_shares": {
