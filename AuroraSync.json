@@ -345,7 +345,14 @@
       "holiday_target_completion_month": "December 2025",
       "remaining_after_allocation": 0.0,
       "notes": "Holiday Pot on track for Feb goal; maintain £29/day spend until payday."
-    }
+    },
+        "coventry_city_fc_pot": {
+      "target_amount": 500.00,
+      "target_date": "2026-05-01",
+      "current_balance": 71.43,
+      "required_monthly_contribution": 71.43,
+      "status": "on_track"
+    } 
   },
   "repayments": {
     "flex": {
