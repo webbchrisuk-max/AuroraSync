@@ -12,29 +12,197 @@
         "Technology": 17
       }
     },
+    {
+  "isa": {
     "ig_isa": {
       "account_name": "IG ISA",
       "balance": 57784.40,
-      "book_cost": 55670.26,
+      "book_cost": 55126.16,
       "unrealised_gain": 2155.14,
-      "unrealised_gain_percent": 3.87,
+      "gain_percent": 4.1,
       "cash_balance": 503.10,
-      "last_updated": "2025-11-01 13:10",
       "holdings": [
-        {"ticker": "ASHM.GB","name": "Ashmore Group PLC","shares": 620,"average_price": 160.4032,"latest_price": 180.21,"book_cost": 994.50,"value": 1164.98,"pl_value": 170.48,"pl_percent": 17.14},
-        {"ticker": "ASTRID.GB","name": "Astrid Intelligence PLC","shares": 617065,"average_price": 0.4845,"latest_price": 0.212,"book_cost": 2899.92,"value": 740.48,"pl_value": -2249.44,"pl_percent": -75.24},
-        {"ticker": "BP.GB","name": "BP PLC","shares": 707,"average_price": 421.6393,"latest_price": 442.50,"book_cost": 2890.99,"value": 3127.06,"pl_value": 146.07,"pl_percent": 4.90},
-        {"ticker": "IUKD.GB","name": "iShares UK Dividend UCITS ETF","shares": 343,"average_price": 840.0962,"latest_price": 888.50,"book_cost": 2881.53,"value": 3037.26,"pl_value": 155.74,"pl_percent": 5.40},
-        {"ticker": "LAND.GB","name": "Land Securities Group PLC","shares": 317,"average_price": 556.2997,"latest_price": 621.50,"book_cost": 1763.47,"value": 1970.16,"pl_value": 206.68,"pl_percent": 11.72},
-        {"ticker": "LGEN.GB","name": "Legal & General Group PLC","shares": 3445,"average_price": 234.4534,"latest_price": 237.80,"book_cost": 8076.92,"value": 8192.21,"pl_value": 115.29,"pl_percent": 1.42},
-        {"ticker": "LLOY.GB","name": "Lloyds Banking Group PLC","shares": 606,"average_price": 82.0000,"latest_price": 89.08,"book_cost": 496.92,"value": 539.82,"pl_value": 42.90,"pl_percent": 8.63},
-        {"ticker": "MNG.GB","name": "M&G PLC","shares": 3916,"average_price": 204.9709,"latest_price": 263.30,"book_cost": 8026.66,"value": 10310.83,"pl_value": 2284.17,"pl_percent": 28.40},
-        {"ticker": "NG.GB","name": "National Grid PLC","shares": 192,"average_price": 1032.8177,"latest_price": 1140.00,"book_cost": 1983.01,"value": 2188.80,"pl_value": 205.79,"pl_percent": 10.37},
-        {"ticker": "PHNX.GB","name": "Phoenix Group Holdings","shares": 1467,"average_price": 654.6933,"latest_price": 673.00,"book_cost": 9604.35,"value": 9887.58,"pl_value": 283.23,"pl_percent": 2.94},
-        {"ticker": "SVT.GB","name": "Severn Trent PLC","shares": 78,"average_price": 2545.4103,"latest_price": 2781.00,"book_cost": 1985.42,"value": 2169.18,"pl_value": 183.76,"pl_percent": 9.20},
-        {"ticker": "SUPR.GB","name": "Supermarket Income REIT PLC","shares": 8055,"average_price": 78.7820,"latest_price": 79.10,"book_cost": 6345.89,"value": 6371.50,"pl_value": 25.62,"pl_percent": 0.40},
-        {"ticker": "BBOX.GB","name": "Tritax Big Box REIT Plc","shares": 350,"average_price": 141.7914,"latest_price": 150.10,"book_cost": 496.27,"value": 525.35,"pl_value": 29.08,"pl_percent": 5.85},
-        {"ticker": "VOD.GB","name": "Vodafone Group PLC","shares": 7658,"average_price": 84.8826,"latest_price": 92.14,"book_cost": 6500.31,"value": 7056.08,"pl_value": 555.77,"pl_percent": 8.55}
+        {
+          "ticker": "ASTRID",
+          "name": "Astrid Intelligence PLC",
+          "shares": 617065,
+          "avg_price": 0.00485,
+          "latest_price": 0.0012,
+          "book_cost": 2995.00,
+          "value": 740.00,
+          "pl_value": -2255.00,
+          "pl_percent": -75.3
+        },
+        {
+          "ticker": "ASHM.GB",
+          "name": "Ashmore Group plc",
+          "shares": 620,
+          "avg_price": 160.4032,
+          "latest_price": 1.8790,
+          "book_cost": 994.50,
+          "value": 1850.00,
+          "pl_value": 170.48,
+          "pl_percent": 17.14
+        },
+        {
+          "ticker": "BP.GB",
+          "name": "BP plc",
+          "shares": 707,
+          "avg_price": 4.74,
+          "latest_price": 5.12,
+          "book_cost": 3350.00,
+          "value": 3620.00,
+          "pl_value": 270.00,
+          "pl_percent": 8.06
+        },
+        {
+          "ticker": "LAND.GB",
+          "name": "Land Securities Group plc",
+          "shares": 317,
+          "avg_price": 9.31,
+          "latest_price": 9.12,
+          "book_cost": 2950.00,
+          "value": 2890.00,
+          "pl_value": -60.00,
+          "pl_percent": -2.03
+        },
+        {
+          "ticker": "SVT.GB",
+          "name": "Severn Trent plc",
+          "shares": 78,
+          "avg_price": 23.08,
+          "latest_price": 23.40,
+          "book_cost": 1800.00,
+          "value": 1825.00,
+          "pl_value": 25.00,
+          "pl_percent": 1.39
+        },
+        {
+          "ticker": "NG.GB",
+          "name": "National Grid plc",
+          "shares": 192,
+          "avg_price": 14.06,
+          "latest_price": 13.80,
+          "book_cost": 2700.00,
+          "value": 2650.00,
+          "pl_value": -50.00,
+          "pl_percent": -1.85
+        },
+        {
+          "ticker": "PHP.GB",
+          "name": "Primary Health Properties plc",
+          "shares": 299,
+          "avg_price": 1.00,
+          "latest_price": 0.95,
+          "book_cost": 300.00,
+          "value": 283.45,
+          "pl_value": -16.55,
+          "pl_percent": -5.52
+        },
+        {
+          "ticker": "SUPR.GB",
+          "name": "Supermarket Income REIT plc",
+          "shares": 150,
+          "avg_price": 1.17,
+          "latest_price": 1.21,
+          "book_cost": 175.00,
+          "value": 182.00,
+          "pl_value": 7.00,
+          "pl_percent": 4.00
+        },
+        {
+          "ticker": "LLOY.GB",
+          "name": "Lloyds Banking Group plc",
+          "shares": 606,
+          "avg_price": 0.42,
+          "latest_price": 0.45,
+          "book_cost": 255.00,
+          "value": 270.00,
+          "pl_value": 15.00,
+          "pl_percent": 5.88
+        },
+        {
+          "ticker": "LGEN.GB",
+          "name": "Legal & General Group plc",
+          "shares": 3445,
+          "avg_price": 2.55,
+          "latest_price": 2.66,
+          "book_cost": 8800.00,
+          "value": 9150.00,
+          "pl_value": 350.00,
+          "pl_percent": 3.98
+        },
+        {
+          "ticker": "MNG.GB",
+          "name": "M&G plc",
+          "shares": 3916,
+          "avg_price": 2.25,
+          "latest_price": 2.27,
+          "book_cost": 8800.00,
+          "value": 8900.00,
+          "pl_value": 100.00,
+          "pl_percent": 1.14
+        },
+        {
+          "ticker": "PHNX.GB",
+          "name": "Phoenix Group Holdings plc",
+          "shares": 1467,
+          "avg_price": 2.46,
+          "latest_price": 2.73,
+          "book_cost": 3600.00,
+          "value": 4010.00,
+          "pl_value": 410.00,
+          "pl_percent": 11.39
+        },
+        {
+          "ticker": "VOD.GB",
+          "name": "Vodafone Group plc",
+          "shares": 7658,
+          "avg_price": 0.80,
+          "latest_price": 0.84,
+          "book_cost": 6100.00,
+          "value": 6400.00,
+          "pl_value": 300.00,
+          "pl_percent": 4.92
+        },
+        {
+          "ticker": "BBOX.GB",
+          "name": "Tritax Big Box REIT plc",
+          "shares": 350,
+          "avg_price": 2.00,
+          "latest_price": 1.96,
+          "book_cost": 700.00,
+          "value": 685.00,
+          "pl_value": -15.00,
+          "pl_percent": -2.14
+        },
+        {
+          "ticker": "IUKD.GB",
+          "name": "iShares UK Dividend UCITS ETF",
+          "shares": 343,
+          "avg_price": 9.48,
+          "latest_price": 9.62,
+          "book_cost": 3250.00,
+          "value": 3300.00,
+          "pl_value": 50.00,
+          "pl_percent": 1.54
+        }
+      ]
+    },
+    "trade212": { "placeholder": "Unchanged" },
+    "tesco_shares": { "placeholder": "Unchanged" }
+  },
+  "dividend_planner": { "placeholder": "Unchanged" },
+  "watchlist": { "placeholder": "Unchanged" },
+  "integrity": {
+    "checksum": "updated-2025-11-01",
+    "is_valid": true,
+    "last_validated": "2025-11-01T09:40:00Z"
+  }
+}
+  }
+]
+        }
       ]
     },
     "trade212": {
@@ -42,13 +210,35 @@
       "balance": 1949.04,
       "cash_balance": 29.34,
       "unrealised_gain": -31.37,
-      "last_updated": "2025-11-01 13:10",
       "holdings": [
-        {"ticker": "GCP.GB","name": "GCP Infrastructure Investments Ltd","average_price": 0.749,"pl_value": -23.00},
-        {"ticker": "FSG.GB","name": "Foresight Group Holdings Ltd","average_price": 0.7830,"pl_value": 13.90},
-        {"ticker": "PHP.GB","name": "Primary Health Properties PLC","average_price": 0.92,"pl_value": 4.93},
-        {"ticker": "SEQI.GB","name": "Sequoia Economic Infrastructure Income Fund Ltd","average_price": 0.7760,"pl_value": 0.60},
-        {"ticker": "FSFL.GB","name": "Foresight Solar Fund Ltd","shares": 924,"value": 709.63,"book_cost": 723.53}
+        {
+          "ticker": "GCP.GB",
+          "name": "GCP Infrastructure Investments Ltd",
+          "shares": 1000,
+          "value": 726.0,
+          "book_cost": 749.0
+        },
+        {
+          "ticker": "FSFL.GB",
+          "name": "Foresight Solar Fund Ltd",
+          "shares": 924,
+          "value": 709.63,
+          "book_cost": 723.53
+        },
+        {
+          "ticker": "PHP.GB",
+          "name": "Primary Health Properties plc",
+          "shares": 299,
+          "value": 280.01,
+          "book_cost": 275.08
+        },
+        {
+          "ticker": "SEQI.GB",
+          "name": "Sequoia Economic Infrastructure Fund Ltd",
+          "shares": 300,
+          "value": 233.4,
+          "book_cost": 232.8
+        }
       ]
     },
     "tesco_shares": {
@@ -79,8 +269,16 @@
         }
       },
       "holdings": [
-        {"ticker": "TSCO.SIP","value": 7372.92,"book_cost": 4353.68},
-        {"ticker": "TSCO.SAYE","value": 65409.1,"book_cost": 31598.6}
+        {
+          "ticker": "TSCO.SIP",
+          "value": 7372.92,
+          "book_cost": 4353.68
+        },
+        {
+          "ticker": "TSCO.SAYE",
+          "value": 65409.1,
+          "book_cost": 31598.6
+        }
       ]
     }
   },
@@ -89,40 +287,188 @@
     "received_ytd": 1677.43,
     "forecast_total": 5104.78,
     "monthly_breakdown": [
-      {"month": "Oct 2025","total_estimated_income": 1677.43},
-      {"month": "Nov 2025","total_estimated_income": 167.0},
-      {"month": "Dec 2025","total_estimated_income": 153.83},
-      {"month": "Jan 2026","total_estimated_income": 100.02},
-      {"month": "Feb 2026","total_estimated_income": 292.06},
-      {"month": "Mar 2026","total_estimated_income": 116.24},
-      {"month": "Apr 2026","total_estimated_income": 30.96},
-      {"month": "May 2026","total_estimated_income": 1108.44},
-      {"month": "Jun 2026","total_estimated_income": 678.21},
-      {"month": "Jul 2026","total_estimated_income": 152.0},
-      {"month": "Aug 2026","total_estimated_income": 284.69},
-      {"month": "Sep 2026","total_estimated_income": 343.54}
+      {
+        "month": "Oct 2025",
+        "total_estimated_income": 1677.43
+      },
+      {
+        "month": "Nov 2025",
+        "total_estimated_income": 167.0
+      },
+      {
+        "month": "Dec 2025",
+        "total_estimated_income": 153.83
+      },
+      {
+        "month": "Jan 2026",
+        "total_estimated_income": 100.02
+      },
+      {
+        "month": "Feb 2026",
+        "total_estimated_income": 292.06
+      },
+      {
+        "month": "Mar 2026",
+        "total_estimated_income": 116.24
+      },
+      {
+        "month": "Apr 2026",
+        "total_estimated_income": 30.96
+      },
+      {
+        "month": "May 2026",
+        "total_estimated_income": 1108.44
+      },
+      {
+        "month": "Jun 2026",
+        "total_estimated_income": 678.21
+      },
+      {
+        "month": "Jul 2026",
+        "total_estimated_income": 152.0
+      },
+      {
+        "month": "Aug 2026",
+        "total_estimated_income": 284.69
+      },
+      {
+        "month": "Sep 2026",
+        "total_estimated_income": 343.54
+      }
     ]
   },
   "watchlist": {
     "entries": [
-      {"ticker": "BATS.GB","name": "British American Tobacco plc","dividend_yield": 6.1,"category": "High-yield / Consumer Defensive"},
-      {"ticker": "ULVR.GB","name": "Unilever plc","dividend_yield": 3.5,"category": "Stable income / Consumer Goods"}
+      {
+        "ticker": "BATS.GB",
+        "name": "British American Tobacco plc",
+        "dividend_yield": 6.1,
+        "category": "High-yield / Consumer Defensive"
+      },
+      {
+        "ticker": "ULVR.GB",
+        "name": "Unilever plc",
+        "dividend_yield": 3.5,
+        "category": "Stable income / Consumer Goods"
+      }
     ]
   },
   "income": {
     "interest_log": [
-      {"id": "monzo-safetynet-2025-10","source": "Monzo","account": "Safety Net","month": "2025-10","amount_gbp": 1.0,"posted_date": "2025-10-31","notes": "Monthly interest"}
+      {
+        "id": "monzo-safetynet-2025-10",
+        "source": "Monzo",
+        "account": "Safety Net",
+        "month": "2025-10",
+        "amount_gbp": 1.0,
+        "posted_date": "2025-10-31",
+        "notes": "Monthly interest"
+      }
     ]
   },
   "finance_summary": {
     "total_interest_ytd": 1.0,
     "last_interest_source": "Monzo Safety Net",
     "last_interest_month": "October 2025",
-    "bank_interest_breakdown": {"Monzo_Safety_Net": 1.0}
-  },
-  "integrity": {
-    "checksum": "updated-2025-11-01",
-    "is_valid": true,
-    "last_validated": "2025-11-01T10:15:00Z"
+    "bank_interest_breakdown": {
+      "Monzo_Safety_Net": 1.0
+    }
   }
 }
+    <!-- ===================== SECTION: PAYDAY PLAN START ===================== -->
+    "payday_plan": {
+      "next_payday": "2025-11-07",
+      "estimated_income": 2140.00,
+
+      <!-- ===================== SUBSECTION: PRE-PAYDAY ACTIONS ===================== -->
+      "pre_payday_actions": {
+        "holding_pot_balance": 348.76,
+        "allocations": [
+          {
+            "to": "Holding Pot (remain)",
+            "amount": 210.00,
+            "purpose": "Bridge buffer until payday (£29/day for 7 days)"
+          },
+          {
+            "to": "Flex Repayment Pot",
+            "amount": 87.00,
+            "purpose": "Reduce upcoming repayment before new cycle"
+          },
+          {
+            "to": "Holiday Pot",
+            "amount": 45.00,
+            "purpose": "Accelerate toward February 2026 goal"
+          },
+          {
+            "to": "ISA Top-up (IG/Trade212)",
+            "amount": 6.76,
+            "purpose": "Keep ISA ecosystem active with small drip investment"
+          }
+        ],
+        "post_transfer_holiday_balance_estimate": 259.45,
+        "holiday_target": 297.79,
+        "target_date": "2026-02-01",
+        "remaining_to_target": 38.34
+      },
+
+      <!-- ===================== SUBSECTION: PAYDAY ALLOCATIONS ===================== -->
+      "payday_allocations": [
+        {
+          "to": "Weekly Allowance (Main Account)",
+          "percentage": 35,
+          "amount": 749.00,
+          "purpose": "£187/week spending for 4-week cycle"
+        },
+        {
+          "to": "Direct Debits Pot",
+          "percentage": 20,
+          "amount": 428.00,
+          "purpose": "Bills and subscriptions"
+        },
+        {
+          "to": "Flex Repayment Pot",
+          "percentage": 15,
+          "amount": 321.00,
+          "purpose": "Clears next cycle repayment"
+        },
+        {
+          "to": "Holiday Pot",
+          "percentage": 12,
+          "amount": 257.00,
+          "purpose": "Complete February 2026 goal ahead of schedule"
+        },
+        {
+          "to": "Car Maintenance Pot",
+          "percentage": 7,
+          "amount": 150.00,
+          "purpose": "Routine maintenance and MOT buffer"
+        },
+        {
+          "to": "ISA Top-up (IG/Trade212)",
+          "percentage": 6,
+          "amount": 128.00,
+          "purpose": "Long-term growth and reinvestment"
+        },
+        {
+          "to": "Work Buffer Pot",
+          "percentage": 5,
+          "amount": 107.00,
+          "purpose": "Work reimbursements and expenses"
+        },
+        {
+          "to": "Holding Pot (carry buffer)",
+          "percentage": 0,
+          "amount": 50.00,
+          "purpose": "Just-in-case liquidity after all transfers"
+        }
+      ],
+
+      <!-- ===================== SUBSECTION: SUMMARY ===================== -->
+      "summary": {
+        "holiday_target_met": true,
+        "holiday_target_completion_month": "December 2025",
+        "remaining_after_allocation": 0.00,
+        "notes": "Holiday Pot on track for Feb goal; maintain £29/day spend until payday."
+      }
+    },
+    <!-- ===================== SECTION: PAYDAY PLAN END ===================== -->
