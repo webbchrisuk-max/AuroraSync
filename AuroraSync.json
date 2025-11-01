@@ -1,17 +1,15 @@
 {
   "isa": {
     "portfolio_summary": {
-      "annual_target_value": 60000,
-      "dividend_yield": 4.3,
+      "annual_target_value": 80000,
+      "dividend_yield": 4.8,
       "sector_allocation": {
         "Financials": 28,
-        "Energy": 15,
-        "Utilities": 10,
-        "Real Estate": 12,
-        "Consumer Defensive": 8,
-        "Telecom": 10,
-        "ETFs": 7,
-        "Other": 10
+        "Utilities": 14,
+        "Consumer Defensive": 22,
+        "Real Estate": 9,
+        "Energy": 10,
+        "Technology": 17
       }
     },
 
@@ -20,35 +18,36 @@
       "balance": 57380.50,
       "book_cost": 55126.16,
       "unrealised_gain": 2254.34,
-      "unrealised_gain_percent": 4.1,
       "cash_balance": 593.10,
-      "dividends_received_today": {
-        "ticker": "PHNX.GB",
-        "amount": 401.22
-      },
       "holdings": [
-        {"ticker": "ASHM.GB", "shares": 620, "value": 1850.00, "book_cost": 1700.00},
-        {"ticker": "BP.GB", "shares": 707, "value": 3620.00, "book_cost": 3350.00},
-        {"ticker": "LAND.GB", "shares": 317, "value": 2890.00, "book_cost": 2950.00},
-        {"ticker": "SVT.GB", "shares": 78, "value": 1825.00, "book_cost": 1800.00},
-        {"ticker": "NG.GB", "shares": 192, "value": 2650.00, "book_cost": 2700.00},
-        {"ticker": "PHP.GB", "shares": 299, "value": 283.45, "book_cost": 300.00},
-        {"ticker": "SUPR.GB", "shares": 150, "value": 182.00, "book_cost": 175.00},
-        {"ticker": "LLOY.GB", "shares": 606, "value": 270.00, "book_cost": 255.00},
-        {"ticker": "LGEN.GB", "shares": 3445, "value": 9150.00, "book_cost": 8800.00},
-        {"ticker": "MNG.GB", "shares": 3916, "value": 8900.00, "book_cost": 8800.00},
-        {"ticker": "PHNX.GB", "shares": 1467, "value": 4010.00, "book_cost": 3600.00},
-        {"ticker": "VOD.GB", "shares": 7658, "value": 6400.00, "book_cost": 6100.00},
-        {"ticker": "BBOX.GB", "shares": 350, "value": 685.00, "book_cost": 700.00},
-        {"ticker": "IUKD.GB", "shares": 343, "value": 3300.00, "book_cost": 3250.00}
+        {"ticker": "ASHM.GB", "value": 1850.00, "book_cost": 1700.00},
+        {"ticker": "BP.GB",   "value": 3620.00, "book_cost": 3350.00},
+        {"ticker": "LAND.GB", "value": 2890.00, "book_cost": 2950.00},
+        {"ticker": "SVT.GB",  "value": 1825.00, "book_cost": 1800.00},
+        {"ticker": "NG.GB",   "value": 2650.00, "book_cost": 2700.00},
+        {"ticker": "PHP.GB",  "value": 283.45,  "book_cost": 300.00},
+        {"ticker": "SUPR.GB", "value": 182.00,  "book_cost": 175.00},
+        {"ticker": "LLOY.GB", "value": 270.00,  "book_cost": 255.00},
+        {"ticker": "LGEN.GB", "value": 9150.00, "book_cost": 8800.00},
+        {"ticker": "MNG.GB",  "value": 8900.00, "book_cost": 8800.00},
+        {"ticker": "PHNX.GB", "value": 4010.00, "book_cost": 3600.00},
+        {"ticker": "VOD.GB",  "value": 6400.00, "book_cost": 6100.00},
+        {"ticker": "BBOX.GB", "value": 685.00,  "book_cost": 700.00},
+        {"ticker": "IUKD.GB", "value": 3300.00, "book_cost": 3250.00}
       ]
     },
 
     "trade212": {
       "account_name": "Trade212 ISA",
-      "balance": 2011.64,
+      "balance": 1949.04,
       "cash_balance": 29.34,
-      "investments_value": 769.74
+      "unrealised_gain": -31.37,
+      "holdings": [
+        {"ticker": "GCP.GB", "name": "GCP Infrastructure Investments Ltd", "shares": 1000, "value": 726.00, "book_cost": 749.00},
+        {"ticker": "FSFL.GB", "name": "Foresight Solar Fund Ltd", "shares": 924, "value": 709.63, "book_cost": 723.53},
+        {"ticker": "PHP.GB", "name": "Primary Health Properties plc", "shares": 299, "value": 280.01, "book_cost": 275.08},
+        {"ticker": "SEQI.GB", "name": "Sequoia Economic Infrastructure Fund Ltd", "shares": 300, "value": 233.40, "book_cost": 232.80}
+      ]
     },
 
     "tesco_shares": {
@@ -57,34 +56,9 @@
       "book_cost": 35952.28,
       "unrealised_gain": 36829.74,
       "unrealised_gain_percent": 102.4,
-      "plans": {
-        "SIP": {
-          "value": 7372.92,
-          "book_cost": 4353.68,
-          "gain": 3019.24
-        },
-        "SAYE": {
-          "value": 65409.10,
-          "book_cost": 31598.60,
-          "gain": 33810.50
-        }
-      }
-    },
-
-    "watchlist": {
-      "entries": [
-        {
-          "ticker": "BATS.GB",
-          "name": "British American Tobacco plc",
-          "dividend_yield": 6.1,
-          "category": "High-yield / Consumer Defensive"
-        },
-        {
-          "ticker": "ULVR.GB",
-          "name": "Unilever plc",
-          "dividend_yield": 3.5,
-          "category": "Stable income / Consumer Goods"
-        }
+      "holdings": [
+        {"ticker": "TSCO.SIP",  "value": 7372.92,  "book_cost": 4353.68},
+        {"ticker": "TSCO.SAYE", "value": 65409.10, "book_cost": 31598.60}
       ]
     }
   },
@@ -93,7 +67,6 @@
     "annual_total": 5104.78,
     "received_ytd": 1677.43,
     "forecast_total": 5104.78,
-
     "monthly_breakdown": [
       {"month": "Oct 2025", "total_estimated_income": 1677.43},
       {"month": "Nov 2025", "total_estimated_income": 167.00},
@@ -108,167 +81,98 @@
       {"month": "Aug 2026", "total_estimated_income": 284.69},
       {"month": "Sep 2026", "total_estimated_income": 343.54}
     ],
-
     "schedule_by_holding": [
+      {"ticker": "MNG.GB", "name": "M&G plc", "frequency": "Semiannual", "forecast_payouts": [
+        {"month": "Oct 2025", "amount": 1276.21},
+        {"month": "May 2026", "amount": 527.09}
+      ]},
+      {"ticker": "PHNX.GB", "name": "Phoenix Group Holdings plc", "frequency": "Semiannual", "forecast_payouts": [
+        {"month": "Oct 2025", "amount": 401.22},
+        {"month": "May 2026", "amount": 413.14}
+      ]},
+      {"ticker": "LGEN.GB", "name": "Legal & General Group plc", "frequency": "Semiannual", "forecast_payouts": [
+        {"month": "Jun 2026", "amount": 539.73},
+        {"month": "Sep 2026", "amount": 214.96}
+      ]},
+      {"ticker": "BP.GB", "name": "BP plc", "frequency": "Quarterly", "forecast_payouts": [
+        {"month": "Dec 2025", "amount": 45.20},
+        {"month": "Mar 2026", "amount": 45.80},
+        {"month": "Jun 2026", "amount": 46.27},
+        {"month": "Sep 2026", "amount": 46.79}
+      ]},
+      {"ticker": "IUKD.GB", "name": "iShares UK Dividend ETF", "frequency": "Quarterly", "forecast_payouts": [
+        {"month": "Dec 2025", "amount": 33.61},
+        {"month": "Mar 2026", "amount": 15.54},
+        {"month": "Jun 2026", "amount": 68.01},
+        {"month": "Sep 2026", "amount": 49.25}
+      ]},
+      {"ticker": "VOD.GB", "name": "Vodafone Group plc", "frequency": "Semiannual", "forecast_payouts": [
+        {"month": "Feb 2026", "amount": 138.28},
+        {"month": "Aug 2026", "amount": 130.68}
+      ]},
+      {"ticker": "FSFL.GB", "name": "Foresight Solar Fund Ltd", "frequency": "Quarterly", "forecast_payouts": [
+        {"month": "Feb 2026", "amount": 18.71},
+        {"month": "May 2026", "amount": 18.71},
+        {"month": "Aug 2026", "amount": 18.94}
+      ]},
+      {"ticker": "SUPR.GB", "name": "Supermarket Income REIT plc", "frequency": "Quarterly", "forecast_payouts": [
+        {"month": "Feb 2026", "amount": 124.44},
+        {"month": "May 2026", "amount": 124.44},
+        {"month": "Aug 2026", "amount": 124.44}
+      ]},
+      {"ticker": "GCP.GB", "name": "GCP Infrastructure Investments Ltd", "frequency": "Quarterly", "forecast_payouts": [
+        {"month": "Mar 2026", "amount": 17.50},
+        {"month": "Jun 2026", "amount": 17.50},
+        {"month": "Sep 2026", "amount": 17.50}
+      ]},
+      {"ticker": "BBOX.GB", "name": "Tritax Big Box REIT plc", "frequency": "Quarterly", "forecast_payouts": [
+        {"month": "Mar 2026", "amount": 7.64},
+        {"month": "Jun 2026", "amount": 6.70},
+        {"month": "Sep 2026", "amount": 6.70}
+      ]},
+      {"ticker": "LAND.GB", "name": "Land Securities Group plc", "frequency": "Quarterly", "forecast_payouts": [
+        {"month": "Jan 2026", "amount": 30.42},
+        {"month": "Apr 2026", "amount": 30.96}
+      ]},
+      {"ticker": "SVT.GB", "name": "Severn Trent plc", "frequency": "Semiannual", "forecast_payouts": [
+        {"month": "Jan 2026", "amount": 39.48}
+      ]},
+      {"ticker": "NG.GB", "name": "National Grid plc", "frequency": "Semiannual", "forecast_payouts": [
+        {"month": "Jan 2026", "amount": 30.12}
+      ]},
+      {"ticker": "ASHM.GB", "name": "Ashmore Group plc", "frequency": "Semiannual", "forecast_payouts": [
+        {"month": "Dec 2025", "amount": 75.02},
+        {"month": "Mar 2026", "amount": 29.76}
+      ]},
+      {"ticker": "PHP.GB", "name": "Primary Health Properties plc", "frequency": "Quarterly", "forecast_payouts": [
+        {"month": "Feb 2026", "amount": 5.48},
+        {"month": "May 2026", "amount": 5.48},
+        {"month": "Aug 2026", "amount": 5.48}
+      ]},
+      {"ticker": "SEQI.GB", "name": "Sequoia Economic Infrastructure Fund Ltd", "frequency": "Quarterly", "forecast_payouts": [
+        {"month": "Feb 2026", "amount": 5.15},
+        {"month": "Aug 2026", "amount": 5.15}
+      ]},
+      {"ticker": "LLOY.GB", "name": "Lloyds Banking Group plc", "frequency": "Semiannual", "forecast_payouts": [
+        {"month": "May 2026", "amount": 14.43},
+        {"month": "Sep 2026", "amount": 8.34}
+      ]}
+    ]
+  },
+
+  "watchlist": {
+    "entries": [
       {
-        "ticker": "MNG.GB",
-        "name": "M&G plc",
-        "frequency": "Semiannual",
-        "forecast_payouts": [
-          {"month": "Oct 2025", "amount": 1276.21},
-          {"month": "May 2026", "amount": 527.09}
-        ]
+        "ticker": "BATS.GB",
+        "name": "British American Tobacco plc",
+        "dividend_yield": 6.1,
+        "category": "High-yield / Consumer Defensive"
       },
       {
-        "ticker": "PHNX.GB",
-        "name": "Phoenix Group Holdings plc",
-        "frequency": "Semiannual",
-        "forecast_payouts": [
-          {"month": "Oct 2025", "amount": 401.22},
-          {"month": "May 2026", "amount": 413.14}
-        ]
-      },
-      {
-        "ticker": "LGEN.GB",
-        "name": "Legal & General Group plc",
-        "frequency": "Semiannual",
-        "forecast_payouts": [
-          {"month": "Jun 2026", "amount": 539.73},
-          {"month": "Sep 2026", "amount": 214.96}
-        ]
-      },
-      {
-        "ticker": "BP.GB",
-        "name": "BP plc",
-        "frequency": "Quarterly",
-        "forecast_payouts": [
-          {"month": "Dec 2025", "amount": 45.20},
-          {"month": "Mar 2026", "amount": 45.80},
-          {"month": "Jun 2026", "amount": 46.27},
-          {"month": "Sep 2026", "amount": 46.79}
-        ]
-      },
-      {
-        "ticker": "IUKD.GB",
-        "name": "iShares UK Dividend ETF",
-        "frequency": "Quarterly",
-        "forecast_payouts": [
-          {"month": "Dec 2025", "amount": 33.61},
-          {"month": "Mar 2026", "amount": 15.54},
-          {"month": "Jun 2026", "amount": 68.01},
-          {"month": "Sep 2026", "amount": 49.25}
-        ]
-      },
-      {
-        "ticker": "VOD.GB",
-        "name": "Vodafone Group plc",
-        "frequency": "Semiannual",
-        "forecast_payouts": [
-          {"month": "Feb 2026", "amount": 138.28},
-          {"month": "Aug 2026", "amount": 130.68}
-        ]
-      },
-      {
-        "ticker": "FSFL.GB",
-        "name": "Foresight Solar Fund Ltd",
-        "frequency": "Quarterly",
-        "forecast_payouts": [
-          {"month": "Feb 2026", "amount": 18.71},
-          {"month": "May 2026", "amount": 18.71},
-          {"month": "Aug 2026", "amount": 18.94}
-        ]
-      },
-      {
-        "ticker": "SUPR.GB",
-        "name": "Supermarket Income REIT plc",
-        "frequency": "Quarterly",
-        "forecast_payouts": [
-          {"month": "Feb 2026", "amount": 124.44},
-          {"month": "May 2026", "amount": 124.44},
-          {"month": "Aug 2026", "amount": 124.44}
-        ]
-      },
-      {
-        "ticker": "GCP.GB",
-        "name": "GCP Infrastructure Investments Ltd",
-        "frequency": "Quarterly",
-        "forecast_payouts": [
-          {"month": "Mar 2026", "amount": 17.50},
-          {"month": "Jun 2026", "amount": 17.50},
-          {"month": "Sep 2026", "amount": 17.50}
-        ]
-      },
-      {
-        "ticker": "BBOX.GB",
-        "name": "Tritax Big Box REIT plc",
-        "frequency": "Quarterly",
-        "forecast_payouts": [
-          {"month": "Mar 2026", "amount": 7.64},
-          {"month": "Jun 2026", "amount": 6.70},
-          {"month": "Sep 2026", "amount": 6.70}
-        ]
-      },
-      {
-        "ticker": "LAND.GB",
-        "name": "Land Securities Group plc",
-        "frequency": "Quarterly",
-        "forecast_payouts": [
-          {"month": "Jan 2026", "amount": 30.42},
-          {"month": "Apr 2026", "amount": 30.96}
-        ]
-      },
-      {
-        "ticker": "SVT.GB",
-        "name": "Severn Trent plc",
-        "frequency": "Semiannual",
-        "forecast_payouts": [
-          {"month": "Jan 2026", "amount": 39.48}
-        ]
-      },
-      {
-        "ticker": "NG.GB",
-        "name": "National Grid plc",
-        "frequency": "Semiannual",
-        "forecast_payouts": [
-          {"month": "Jan 2026", "amount": 30.12}
-        ]
-      },
-      {
-        "ticker": "ASHM.GB",
-        "name": "Ashmore Group plc",
-        "frequency": "Semiannual",
-        "forecast_payouts": [
-          {"month": "Dec 2025", "amount": 75.02},
-          {"month": "Mar 2026", "amount": 29.76}
-        ]
-      },
-      {
-        "ticker": "PHP.GB",
-        "name": "Primary Health Properties plc",
-        "frequency": "Quarterly",
-        "forecast_payouts": [
-          {"month": "Feb 2026", "amount": 5.48},
-          {"month": "May 2026", "amount": 5.48},
-          {"month": "Aug 2026", "amount": 5.48}
-        ]
-      },
-      {
-        "ticker": "SEQI.GB",
-        "name": "Sequoia Economic Infrastructure Fund Ltd",
-        "frequency": "Quarterly",
-        "forecast_payouts": [
-          {"month": "Feb 2026", "amount": 5.15},
-          {"month": "Aug 2026", "amount": 5.15}
-        ]
-      },
-      {
-        "ticker": "LLOY.GB",
-        "name": "Lloyds Banking Group plc",
-        "frequency": "Semiannual",
-        "forecast_payouts": [
-          {"month": "May 2026", "amount": 14.43},
-          {"month": "Sep 2026", "amount": 8.34}
-        ]
+        "ticker": "ULVR.GB",
+        "name": "Unilever plc",
+        "dividend_yield": 3.5,
+        "category": "Stable income / Consumer Goods"
       }
     ]
   }
