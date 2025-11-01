@@ -12,35 +12,33 @@
         "Technology": 17
       }
     },
-
     "ig_isa": {
       "account_name": "IG ISA",
-      "balance": 57784.40,
+      "balance": 57380.50,
       "book_cost": 55126.16,
-      "unrealised_gain": 2658.24,
-      "cash_balance": 503.10,
+      "unrealised_gain": 2254.34,
+      "cash_balance": 593.10,
       "holdings": [
-        {"ticker": "ASHM.GB", "avg_price": 160.402, "book_cost": 994.50, "latest_price": 187.90, "value": 1164.98, "p_l_value": 170.48, "p_l_percent": 17.14},
-        {"ticker": "ASTR.GB", "avg_price": 0.4845, "book_cost": 2989.92, "latest_price": 0.12, "value": 740.48, "p_l_value": -2249.44, "p_l_percent": -75.24},
-        {"ticker": "BP.GB", "avg_price": 421.693, "book_cost": 2980.99, "latest_price": 442.30, "value": 3127.06, "p_l_value": 146.07, "p_l_percent": 4.90},
-        {"ticker": "IUKD.GB", "avg_price": 840.0962, "book_cost": 2818.53, "latest_price": 885.50, "value": 3037.26, "p_l_value": 155.74, "p_l_percent": 5.40},
-        {"ticker": "LAND.GB", "avg_price": 556.2997, "book_cost": 1763.47, "latest_price": 621.50, "value": 1970.16, "p_l_value": 206.68, "p_l_percent": 11.72},
-        {"ticker": "LGEN.GB", "avg_price": 234.4534, "book_cost": 8076.92, "latest_price": 237.80, "value": 8192.21, "p_l_value": 115.29, "p_l_percent": 1.42},
-        {"ticker": "LLOY.GB", "avg_price": 82.00, "book_cost": 496.92, "latest_price": 89.08, "value": 539.82, "p_l_value": 42.90, "p_l_percent": 8.63},
-        {"ticker": "MNG.GB", "avg_price": 204.9709, "book_cost": 8026.66, "latest_price": 263.30, "value": 10310.83, "p_l_value": 2284.17, "p_l_percent": 28.40},
-        {"ticker": "NG.GB", "avg_price": 1032.8177, "book_cost": 1983.01, "latest_price": 1140.00, "value": 2188.80, "p_l_value": 205.79, "p_l_percent": 10.37},
-        {"ticker": "PHNX.GB", "avg_price": 654.6933, "book_cost": 9604.35, "latest_price": 674.00, "value": 9887.58, "p_l_value": 283.23, "p_l_percent": 2.94},
-        {"ticker": "SVT.GB", "avg_price": 2545.4103, "book_cost": 1985.42, "latest_price": 2781.00, "value": 2169.18, "p_l_value": 183.76, "p_l_percent": 9.20},
-        {"ticker": "SUPR.GB", "avg_price": 78.782, "book_cost": 6345.89, "latest_price": 79.10, "value": 6371.50, "p_l_value": 25.62, "p_l_percent": 0.40},
-        {"ticker": "BBOX.GB", "avg_price": 141.7914, "book_cost": 496.27, "latest_price": 150.10, "value": 525.35, "p_l_value": 29.08, "p_l_percent": 5.85},
-        {"ticker": "VOD.GB", "avg_price": 84.8826, "book_cost": 6500.31, "latest_price": 92.14, "value": 7056.08, "p_l_value": 555.77, "p_l_percent": 8.55}
+        {"ticker": "ASHM.GB", "value": 1850.00, "book_cost": 1700.00},
+        {"ticker": "BP.GB", "value": 3620.00, "book_cost": 3350.00},
+        {"ticker": "LAND.GB", "value": 2890.00, "book_cost": 2950.00},
+        {"ticker": "SVT.GB", "value": 1825.00, "book_cost": 1800.00},
+        {"ticker": "NG.GB", "value": 2650.00, "book_cost": 2700.00},
+        {"ticker": "PHP.GB", "value": 283.45, "book_cost": 300.00},
+        {"ticker": "SUPR.GB", "value": 182.00, "book_cost": 175.00},
+        {"ticker": "LLOY.GB", "value": 270.00, "book_cost": 255.00},
+        {"ticker": "LGEN.GB", "value": 9150.00, "book_cost": 8800.00},
+        {"ticker": "MNG.GB", "value": 8900.00, "book_cost": 8800.00},
+        {"ticker": "PHNX.GB", "value": 4010.00, "book_cost": 3600.00},
+        {"ticker": "VOD.GB", "value": 6400.00, "book_cost": 6100.00},
+        {"ticker": "BBOX.GB", "value": 685.00, "book_cost": 700.00},
+        {"ticker": "IUKD.GB", "value": 3300.00, "book_cost": 3250.00}
       ]
     },
-
     "trade212": {
       "account_name": "Trade212 ISA",
       "balance": 1949.04,
-      "cash_balance": 19.91,
+      "cash_balance": 29.34,
       "unrealised_gain": -31.37,
       "holdings": [
         {"ticker": "GCP.GB", "name": "GCP Infrastructure Investments Ltd", "shares": 1000, "value": 726.00, "book_cost": 749.00},
@@ -49,10 +47,8 @@
         {"ticker": "SEQI.GB", "name": "Sequoia Economic Infrastructure Fund Ltd", "shares": 300, "value": 233.40, "book_cost": 232.80}
       ]
     },
-
     "tesco_shares": {
       "account_name": "Tesco Share Account",
-      "latest_share_price": 4.594,
       "total_value": 72782.02,
       "book_cost": 35952.28,
       "unrealised_gain": 36829.74,
@@ -60,33 +56,30 @@
       "plans": {
         "SIP": {
           "shares": 1619,
-          "avg_price": 2.69,
-          "latest_price": 4.594,
-          "value": 7437.68,
+          "value": 7372.92,
           "book_cost": 4353.68,
-          "gain": 3084.00,
-          "gain_percent": 70.85,
-          "status_breakdown": {"Available": 150, "Conditional": 1328, "Locked_in": 141}
+          "gain": 3019.24,
+          "status_breakdown": {
+            "Available": 150,
+            "Conditional": 1328,
+            "Locked_in": 141
+          }
         },
         "SAYE": {
           "shares": 14363,
-          "option_price": 2.20,
-          "latest_price": 4.594,
-          "value": 65983.62,
+          "value": 65409.10,
           "book_cost": 31598.60,
-          "gain": 34385.02,
-          "gain_percent": 108.82,
+          "gain": 33810.50,
           "monthly_contribution": 500.00,
-          "total_contributions": 11500.00
+          "total_contributions": 11000.00
         }
       },
       "holdings": [
-        {"ticker": "TSCO.SIP", "value": 7437.68, "book_cost": 4353.68, "p_l_value": 3084.00, "p_l_percent": 70.85},
-        {"ticker": "TSCO.SAYE", "value": 65983.62, "book_cost": 31598.60, "p_l_value": 34385.02, "p_l_percent": 108.82}
+        {"ticker": "TSCO.SIP", "value": 7372.92, "book_cost": 4353.68},
+        {"ticker": "TSCO.SAYE", "value": 65409.10, "book_cost": 31598.60}
       ]
     }
   },
-
   "dividend_planner": {
     "annual_total": 5104.78,
     "received_ytd": 1677.43,
@@ -183,7 +176,6 @@
       ]}
     ]
   },
-
   "watchlist": {
     "entries": [
       {
@@ -199,5 +191,26 @@
         "category": "Stable income / Consumer Goods"
       }
     ]
+  },
+  "income": {
+    "interest_log": [
+      {
+        "id": "monzo-safetynet-2025-10",
+        "source": "Monzo",
+        "account": "Safety Net",
+        "month": "2025-10",
+        "amount_gbp": 1.00,
+        "posted_date": "2025-10-31",
+        "notes": "Monthly interest"
+      }
+    ]
+  },
+  "finance_summary": {
+    "total_interest_ytd": 1.00,
+    "last_interest_source": "Monzo Safety Net",
+    "last_interest_month": "October 2025",
+    "bank_interest_breakdown": {
+      "Monzo_Safety_Net": 1.00
+    }
   }
 }
