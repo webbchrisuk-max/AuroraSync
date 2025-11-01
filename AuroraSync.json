@@ -150,14 +150,24 @@
   },
 
   "dividend_planner": {
-    "annual_total": 5104.78,
-    "received_ytd": 2103.14,
-    "forecast_total": 5200.00,
-    "last_payment": { "ticker": "PHNX.GB", "amount": 401.22, "date": "2025-10-30" },
-    "next_payment_due": { "ticker": "BATS.GB", "amount": 185.60, "date": "2025-12-02" },
-    "monthly_breakdown": [
-      { "month": "October 2025", "total_estimated_income": 1677.43 },
-      { "month": "November 2025", "total_estimated_income": 167.35 }
+  "annual_total": 3225.44,
+  "received_ytd": 2440.10,
+  "forecast_total": 3225.44,
+  "monthly_breakdown": [
+    {"month": "Jan", "total_estimated_income": 250.00},
+    {"month": "Feb", "total_estimated_income": 180.00},
+    {"month": "Mar", "total_estimated_income": 295.00},
+    {"month": "Apr", "total_estimated_income": 210.00},
+    {"month": "May", "total_estimated_income": 340.00},
+    {"month": "Jun", "total_estimated_income": 265.00},
+    {"month": "Jul", "total_estimated_income": 310.00},
+    {"month": "Aug", "total_estimated_income": 220.00},
+    {"month": "Sep", "total_estimated_income": 410.00},
+    {"month": "Oct", "total_estimated_income": 325.00},
+    {"month": "Nov", "total_estimated_income": 275.00},
+    {"month": "Dec", "total_estimated_income": 165.00}
+  ]
+}
     ]
   }
 }
