@@ -314,17 +314,15 @@
       "Monzo_Safety_Net": 1
     }
   },
-
-  
   "payday_plan": {
     "next_payday": "2025-11-07",
-    "estimated_income": 2140.00,
+    "estimated_income": 2140.0,
     "pre_payday_actions": {
       "holding_pot_balance": 348.76,
       "allocations": [
-        { "to": "Holding Pot (remain)", "amount": 210.00, "purpose": "Bridge buffer until payday (£29/day for 7 days)" },
-        { "to": "Flex Repayment Pot", "amount": 87.00, "purpose": "Reduce upcoming repayment before new cycle" },
-        { "to": "Holiday Pot", "amount": 45.00, "purpose": "Accelerate toward February 2026 goal" },
+        { "to": "Holding Pot (remain)", "amount": 210.0, "purpose": "Bridge buffer until payday (£29/day for 7 days)" },
+        { "to": "Flex Repayment Pot", "amount": 87.0, "purpose": "Reduce upcoming repayment before new cycle" },
+        { "to": "Holiday Pot", "amount": 45.0, "purpose": "Accelerate toward February 2026 goal" },
         { "to": "ISA Top-up (IG/Trade212)", "amount": 6.76, "purpose": "Keep ISA ecosystem active with small drip investment" }
       ],
       "post_transfer_holiday_balance_estimate": 259.45,
@@ -333,24 +331,32 @@
       "remaining_to_target": 38.34
     },
     "payday_allocations": [
-      { "to": "Weekly Allowance (Main Account)", "percentage": 35, "amount": 749.00, "purpose": "£187/week spending for 4-week cycle" },
-      { "to": "Direct Debits Pot", "percentage": 20, "amount": 428.00, "purpose": "Bills and subscriptions" },
-      { "to": "Flex Repayment Pot", "percentage": 15, "amount": 321.00, "purpose": "Clears next cycle repayment" },
-      { "to": "Holiday Pot", "percentage": 12, "amount": 257.00, "purpose": "Complete February 2026 goal ahead of schedule" },
-      { "to": "Car Maintenance Pot", "percentage": 7, "amount": 150.00, "purpose": "Routine maintenance and MOT buffer" },
-      { "to": "ISA Top-up (IG/Trade212)", "percentage": 6, "amount": 128.00, "purpose": "Long-term growth and reinvestment" },
-      { "to": "Work Buffer Pot", "percentage": 5, "amount": 107.00, "purpose": "Work reimbursements and expenses" },
-      { "to": "Holding Pot (carry buffer)", "percentage": 0, "amount": 50.00, "purpose": "Just-in-case liquidity after all transfers" }
+      { "to": "Weekly Allowance (Main Account)", "percentage": 35, "amount": 749.0, "purpose": "£187/week spending for 4-week cycle" },
+      { "to": "Direct Debits Pot", "percentage": 20, "amount": 428.0, "purpose": "Bills and subscriptions" },
+      { "to": "Flex Repayment Pot", "percentage": 15, "amount": 321.0, "purpose": "Clears next cycle repayment" },
+      { "to": "Holiday Pot", "percentage": 12, "amount": 257.0, "purpose": "Complete February 2026 goal ahead of schedule" },
+      { "to": "Car Maintenance Pot", "percentage": 7, "amount": 150.0, "purpose": "Routine maintenance and MOT buffer" },
+      { "to": "ISA Top-up (IG/Trade212)", "percentage": 6, "amount": 128.0, "purpose": "Long-term growth and reinvestment" },
+      { "to": "Work Buffer Pot", "percentage": 5, "amount": 107.0, "purpose": "Work reimbursements and expenses" },
+      { "to": "Holding Pot (carry buffer)", "percentage": 0, "amount": 50.0, "purpose": "Just-in-case liquidity after all transfers" }
     ],
     "summary": {
       "holiday_target_met": true,
       "holiday_target_completion_month": "December 2025",
-      "remaining_after_allocation": 0.00,
+      "remaining_after_allocation": 0.0,
       "notes": "Holiday Pot on track for Feb goal; maintain £29/day spend until payday."
     }
   },
-  
-
+  "repayments": {
+    "flex": {
+      "status": "covered",
+      "covered_for": "2025-12-01",
+      "schedule": [
+        { "date": "2025-12-01", "status": "covered" },
+        { "date": "2026-01-01", "amount_due": 380.87, "status": "projected" }
+        ]
+    }
+  },
   "integrity": {
     "checksum": "updated-2025-11-01",
     "is_valid": true,
