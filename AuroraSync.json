@@ -14,168 +14,176 @@
     },
     "ig_isa": {
       "account_name": "IG ISA",
-      "balance": 57380.5,
+      "balance": 57784.40,
       "book_cost": 55126.16,
-      "unrealised_gain": 2254.34,
-      "cash_balance": 593.1,
+      "unrealised_gain": 2155.14,
+      "gain_percent": 4.1,
+      "cash_balance": 503.10,
       "holdings": [
         {
-          "holdings": [
-  {
-    "ticker": "ASHM.GB",
-    "name": "Ashmore Group plc",
-    "shares": 620,
-    "value": 1850.00,
-    "book_cost": 1700.00,
-    "avg_price": 2.74,
-    "latest_price": 2.98,
-    "pl_value": 150.00,
-    "pl_percent": 8.82
-  },
-  {
-    "ticker": "BP.GB",
-    "name": "BP plc",
-    "shares": 707,
-    "value": 3620.00,
-    "book_cost": 3350.00,
-    "avg_price": 4.74,
-    "latest_price": 5.12,
-    "pl_value": 270.00,
-    "pl_percent": 8.06
-  },
-  {
-    "ticker": "LAND.GB",
-    "name": "Land Securities Group plc",
-    "shares": 317,
-    "value": 2890.00,
-    "book_cost": 2950.00,
-    "avg_price": 9.31,
-    "latest_price": 9.12,
-    "pl_value": -60.00,
-    "pl_percent": -2.03
-  },
-  {
-    "ticker": "SVT.GB",
-    "name": "Severn Trent plc",
-    "shares": 78,
-    "value": 1825.00,
-    "book_cost": 1800.00,
-    "avg_price": 23.08,
-    "latest_price": 23.40,
-    "pl_value": 25.00,
-    "pl_percent": 1.39
-  },
-  {
-    "ticker": "NG.GB",
-    "name": "National Grid plc",
-    "shares": 192,
-    "value": 2650.00,
-    "book_cost": 2700.00,
-    "avg_price": 14.06,
-    "latest_price": 13.80,
-    "pl_value": -50.00,
-    "pl_percent": -1.85
-  },
-  {
-    "ticker": "PHP.GB",
-    "name": "Primary Health Properties plc",
-    "shares": 299,
-    "value": 283.45,
-    "book_cost": 300.00,
-    "avg_price": 1.00,
-    "latest_price": 0.95,
-    "pl_value": -16.55,
-    "pl_percent": -5.52
-  },
-  {
-    "ticker": "SUPR.GB",
-    "name": "Supermarket Income REIT plc",
-    "shares": 150,
-    "value": 182.00,
-    "book_cost": 175.00,
-    "avg_price": 1.17,
-    "latest_price": 1.21,
-    "pl_value": 7.00,
-    "pl_percent": 4.00
-  },
-  {
-    "ticker": "LLOY.GB",
-    "name": "Lloyds Banking Group plc",
-    "shares": 606,
-    "value": 270.00,
-    "book_cost": 255.00,
-    "avg_price": 0.42,
-    "latest_price": 0.45,
-    "pl_value": 15.00,
-    "pl_percent": 5.88
-  },
-  {
-    "ticker": "LGEN.GB",
-    "name": "Legal & General Group plc",
-    "shares": 3445,
-    "value": 9150.00,
-    "book_cost": 8800.00,
-    "avg_price": 2.55,
-    "latest_price": 2.66,
-    "pl_value": 350.00,
-    "pl_percent": 3.98
-  },
-  {
-    "ticker": "MNG.GB",
-    "name": "M&G plc",
-    "shares": 3916,
-    "value": 8900.00,
-    "book_cost": 8800.00,
-    "avg_price": 2.25,
-    "latest_price": 2.27,
-    "pl_value": 100.00,
-    "pl_percent": 1.14
-  },
-  {
-    "ticker": "PHNX.GB",
-    "name": "Phoenix Group Holdings plc",
-    "shares": 1467,
-    "value": 4010.00,
-    "book_cost": 3600.00,
-    "avg_price": 2.46,
-    "latest_price": 2.73,
-    "pl_value": 410.00,
-    "pl_percent": 11.39
-  },
-  {
-    "ticker": "VOD.GB",
-    "name": "Vodafone Group plc",
-    "shares": 7658,
-    "value": 6400.00,
-    "book_cost": 6100.00,
-    "avg_price": 0.80,
-    "latest_price": 0.84,
-    "pl_value": 300.00,
-    "pl_percent": 4.92
-  },
-  {
-    "ticker": "BBOX.GB",
-    "name": "Tritax Big Box REIT plc",
-    "shares": 350,
-    "value": 685.00,
-    "book_cost": 700.00,
-    "avg_price": 2.00,
-    "latest_price": 1.96,
-    "pl_value": -15.00,
-    "pl_percent": -2.14
-  },
-  {
-    "ticker": "IUKD.GB",
-    "name": "iShares UK Dividend UCITS ETF",
-    "shares": 343,
-    "value": 3300.00,
-    "book_cost": 3250.00,
-    "avg_price": 9.48,
-    "latest_price": 9.62,
-    "pl_value": 50.00,
-    "pl_percent": 1.54
-  }
-]
+          "ticker": "ASTRID",
+          "name": "Astrid Intelligence PLC",
+          "shares": 617065,
+          "avg_price": 0.00485,
+          "latest_price": 0.0012,
+          "book_cost": 2995.00,
+          "value": 740.00,
+          "pl_value": -2255.00,
+          "pl_percent": -75.3
+        },
+        {
+          "ticker": "ASHM.GB",
+          "name": "Ashmore Group plc",
+          "shares": 620,
+          "avg_price": 2.74,
+          "latest_price": 2.98,
+          "book_cost": 1700.00,
+          "value": 1850.00,
+          "pl_value": 150.00,
+          "pl_percent": 8.82
+        },
+        {
+          "ticker": "BP.GB",
+          "name": "BP plc",
+          "shares": 707,
+          "avg_price": 4.74,
+          "latest_price": 5.12,
+          "book_cost": 3350.00,
+          "value": 3620.00,
+          "pl_value": 270.00,
+          "pl_percent": 8.06
+        },
+        {
+          "ticker": "LAND.GB",
+          "name": "Land Securities Group plc",
+          "shares": 317,
+          "avg_price": 9.31,
+          "latest_price": 9.12,
+          "book_cost": 2950.00,
+          "value": 2890.00,
+          "pl_value": -60.00,
+          "pl_percent": -2.03
+        },
+        {
+          "ticker": "SVT.GB",
+          "name": "Severn Trent plc",
+          "shares": 78,
+          "avg_price": 23.08,
+          "latest_price": 23.40,
+          "book_cost": 1800.00,
+          "value": 1825.00,
+          "pl_value": 25.00,
+          "pl_percent": 1.39
+        },
+        {
+          "ticker": "NG.GB",
+          "name": "National Grid plc",
+          "shares": 192,
+          "avg_price": 14.06,
+          "latest_price": 13.80,
+          "book_cost": 2700.00,
+          "value": 2650.00,
+          "pl_value": -50.00,
+          "pl_percent": -1.85
+        },
+        {
+          "ticker": "PHP.GB",
+          "name": "Primary Health Properties plc",
+          "shares": 299,
+          "avg_price": 1.00,
+          "latest_price": 0.95,
+          "book_cost": 300.00,
+          "value": 283.45,
+          "pl_value": -16.55,
+          "pl_percent": -5.52
+        },
+        {
+          "ticker": "SUPR.GB",
+          "name": "Supermarket Income REIT plc",
+          "shares": 150,
+          "avg_price": 1.17,
+          "latest_price": 1.21,
+          "book_cost": 175.00,
+          "value": 182.00,
+          "pl_value": 7.00,
+          "pl_percent": 4.00
+        },
+        {
+          "ticker": "LLOY.GB",
+          "name": "Lloyds Banking Group plc",
+          "shares": 606,
+          "avg_price": 0.42,
+          "latest_price": 0.45,
+          "book_cost": 255.00,
+          "value": 270.00,
+          "pl_value": 15.00,
+          "pl_percent": 5.88
+        },
+        {
+          "ticker": "LGEN.GB",
+          "name": "Legal & General Group plc",
+          "shares": 3445,
+          "avg_price": 2.55,
+          "latest_price": 2.66,
+          "book_cost": 8800.00,
+          "value": 9150.00,
+          "pl_value": 350.00,
+          "pl_percent": 3.98
+        },
+        {
+          "ticker": "MNG.GB",
+          "name": "M&G plc",
+          "shares": 3916,
+          "avg_price": 2.25,
+          "latest_price": 2.27,
+          "book_cost": 8800.00,
+          "value": 8900.00,
+          "pl_value": 100.00,
+          "pl_percent": 1.14
+        },
+        {
+          "ticker": "PHNX.GB",
+          "name": "Phoenix Group Holdings plc",
+          "shares": 1467,
+          "avg_price": 2.46,
+          "latest_price": 2.73,
+          "book_cost": 3600.00,
+          "value": 4010.00,
+          "pl_value": 410.00,
+          "pl_percent": 11.39
+        },
+        {
+          "ticker": "VOD.GB",
+          "name": "Vodafone Group plc",
+          "shares": 7658,
+          "avg_price": 0.80,
+          "latest_price": 0.84,
+          "book_cost": 6100.00,
+          "value": 6400.00,
+          "pl_value": 300.00,
+          "pl_percent": 4.92
+        },
+        {
+          "ticker": "BBOX.GB",
+          "name": "Tritax Big Box REIT plc",
+          "shares": 350,
+          "avg_price": 2.00,
+          "latest_price": 1.96,
+          "book_cost": 700.00,
+          "value": 685.00,
+          "pl_value": -15.00,
+          "pl_percent": -2.14
+        },
+        {
+          "ticker": "IUKD.GB",
+          "name": "iShares UK Dividend UCITS ETF",
+          "shares": 343,
+          "avg_price": 9.48,
+          "latest_price": 9.62,
+          "book_cost": 3250.00,
+          "value": 3300.00,
+          "pl_value": 50.00,
+          "pl_percent": 1.54
         }
       ]
     },
@@ -261,54 +269,18 @@
     "received_ytd": 1677.43,
     "forecast_total": 5104.78,
     "monthly_breakdown": [
-      {
-        "month": "Oct 2025",
-        "total_estimated_income": 1677.43
-      },
-      {
-        "month": "Nov 2025",
-        "total_estimated_income": 167.0
-      },
-      {
-        "month": "Dec 2025",
-        "total_estimated_income": 153.83
-      },
-      {
-        "month": "Jan 2026",
-        "total_estimated_income": 100.02
-      },
-      {
-        "month": "Feb 2026",
-        "total_estimated_income": 292.06
-      },
-      {
-        "month": "Mar 2026",
-        "total_estimated_income": 116.24
-      },
-      {
-        "month": "Apr 2026",
-        "total_estimated_income": 30.96
-      },
-      {
-        "month": "May 2026",
-        "total_estimated_income": 1108.44
-      },
-      {
-        "month": "Jun 2026",
-        "total_estimated_income": 678.21
-      },
-      {
-        "month": "Jul 2026",
-        "total_estimated_income": 152.0
-      },
-      {
-        "month": "Aug 2026",
-        "total_estimated_income": 284.69
-      },
-      {
-        "month": "Sep 2026",
-        "total_estimated_income": 343.54
-      }
+      { "month": "Oct 2025", "total_estimated_income": 1677.43 },
+      { "month": "Nov 2025", "total_estimated_income": 167.0 },
+      { "month": "Dec 2025", "total_estimated_income": 153.83 },
+      { "month": "Jan 2026", "total_estimated_income": 100.02 },
+      { "month": "Feb 2026", "total_estimated_income": 292.06 },
+      { "month": "Mar 2026", "total_estimated_income": 116.24 },
+      { "month": "Apr 2026", "total_estimated_income": 30.96 },
+      { "month": "May 2026", "total_estimated_income": 1108.44 },
+      { "month": "Jun 2026", "total_estimated_income": 678.21 },
+      { "month": "Jul 2026", "total_estimated_income": 152.0 },
+      { "month": "Aug 2026", "total_estimated_income": 284.69 },
+      { "month": "Sep 2026", "total_estimated_income": 343.54 }
     ]
   },
   "watchlist": {
@@ -347,5 +319,10 @@
     "bank_interest_breakdown": {
       "Monzo_Safety_Net": 1.0
     }
+  },
+  "integrity": {
+    "checksum": "updated-2025-11-01",
+    "is_valid": true,
+    "last_validated": "2025-11-01T10:15:00Z"
   }
 }
