@@ -315,7 +315,7 @@
     }
   },
 
-  <!-- ===================== SECTION: PAYDAY PLAN START ===================== -->
+  
   "payday_plan": {
     "next_payday": "2025-11-07",
     "estimated_income": 2140.00,
@@ -349,7 +349,7 @@
       "notes": "Holiday Pot on track for Feb goal; maintain £29/day spend until payday."
     }
   },
-  <!-- ===================== SECTION: PAYDAY PLAN END ===================== -->
+  
 
   "integrity": {
     "checksum": "updated-2025-11-01",
