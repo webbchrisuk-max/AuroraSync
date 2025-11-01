@@ -35,12 +35,12 @@
           "ticker": "ASHM.GB",
           "name": "Ashmore Group plc",
           "shares": 620,
-          "avg_price": 2.74,
-          "latest_price": 2.98,
-          "book_cost": 1700.00,
+          "avg_price": 160.4032,
+          "latest_price": 1.8790,
+          "book_cost": 994.50,
           "value": 1850.00,
-          "pl_value": 150.00,
-          "pl_percent": 8.82
+          "pl_value": 170.48,
+          "pl_percent": 17.14
         },
         {
           "ticker": "BP.GB",
